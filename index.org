@@ -1,0 +1,43 @@
+#+HUGO_BASE_DIR: ./hugo/metajoin/
+#+HTML_HEAD: <style> body > div { text-align: justify; max-width: 30em; margin: auto; } </style>
+# #+HTML_HEAD: <style> @import url(http://fonts.googleapis.com/css?family=Roboto+Slab); body { font-family: "Roboto Slab", sans-serif; }  </style>
+
+#+AUTHOR: Misha Volkhov
+#+TITLE: Misha Volkhov
+
+
+#+ATTR_HTML: :align right :width 24%
+[[./portrait.jpg]]
+
+#+ATTR_HTML: :style max-width:72%;
+I am a third year PhD student at the University of Edinburgh, [[https://www.ed.ac.uk/informatics/blockchain][BTL]]/[[https://www.ed.ac.uk/studying/postgraduate/degrees/index.php?r=site/view&id=493][LFCS]], working on zero-knowledge proofs and private smart contracts, advised by Dr. Markulf Kohlweiss. I finished [[https://wikimpri.dptinfo.ens-cachan.fr/doku.php][MPRI]] master's programme in 2019, and before that got my bachelor's degree from ITMO University ([[https://ditp.ifmo.ru/en/][CT]] department, 2017). I have been a part of [[https://serokell.io/][Serokell]] team in 2015-2018 working on several blockchain-related projects, Cardano SL being one of the biggest. My area of software dev expertise then was mostly haskell ecosystem related.
+
+
+
+Some things I have done or participated in recently[fn:1]:
+1. /Zswap: zk-SNARK Based Non-Interactive Multi-Asset Swaps/; PETS 2022. [[https://eprint.iacr.org/2022/1002.pdf][Eprint 2022/1002]], [[https://youtu.be/sUh_8sqKtzc][Talk video]].
+   F. Engelmann, T. Kerber, M. Kohlweiss, M. Volkhov.
+2. [[https://crypto.ethereum.org/blog/groth-sahai-blogpost][Groth-Sahai Proofs Are Not That Scary]], blog post, 06/2022.
+3. [[https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1][Linear Relations on QAP Polynomials]], blog post, 03/2021. (also [[./blog-qap/index.html][here]])
+4. /Snarky Ceremonies/: Asiacrypt 2021. [[https://eprint.iacr.org/2021/219.pdf][Eprint 2021/219]], 4th ZKProof workshop, [[https://www.youtube.com/watch?v=fo0BmpyBhS8][Talk video]].
+   M. Kohlweiss, M. Maller, J. Siim, M. Volkhov.
+5. /Another Look at Extraction and Randomization of Groth's zk-SNARK/; Financial Cryptography 21, [[https://eprint.iacr.org/2020/811.pdf][Eprint 2020/811]], [[https://www.youtube.com/watch?v=Ub7wdyWQb1w][Talk video]].
+   K. Baghery, M. Kohlweiss, J. Siim, M. Volkhov.
+6. [[https://priviledge-project.eu/news/reasoning-about-privacy-in-smart-contracts][Reasoning about Privacy in Smart Contracts]], blog post 02/2020.
+7. /Techniques, Software, and Applications for Packed Partially Homomorphic Encryption/. [[./pahedgk.pdf][Preprint]]. Master's thesis at INRIA Paris/MPRI.
+
+My contacts:
++ Email: ~mikhail.volkhov~ АТ ~ed.ac.uk~
++ Github: https://github.com/volhovm
++ GPG key at [[https://keys.openpgp.org/search?q=3B88C4272A0B49C8F0B0A78CF962509771F9CD1A][keys.openpgp.org]]. FP ~3B88 C427 2A0B 49C8 F0B0 A78C F962 5097 71F9 CD1A~
++ Social media: [[https://www.youtube.com/channel/UCT470I2k3ipNnq6jY3HvsQQ][[youtube]​]], [[https://www.instagram.com/volhovm/][[instagram]​]], [[https://soundcloud.com/volhovm/likes][[soundcloud]​]] (my nickname is ~volhovm~ almost everywhere).
+
+My informal writing:
+- [[./blog/N2022-10-04.html][N2022-10-04]] Про втому
+- [[./blog/N2022-05-14.html][N2022-05-14]] Зарисовка первого дня
+
+#+ATTR_HTML: :style max-width:60%;
+[[./mandala.png]]
+
+* Footnotes
+[fn:1] Paper authors are sorted alphabetically in cryptography (usually), so yes, I'm always in the end of the list :shrug:
