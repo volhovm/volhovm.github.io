@@ -36,8 +36,9 @@ My informal writing:
 - [[./blog/N2022-10-04.html][N2022-10-04]] Про втому
 - [[./blog/N2022-05-14.html][N2022-05-14]] Зарисовка первого дня
 
-#+ATTR_HTML: :style max-width:60%;
-[[./mandala.png]]
+
+# #+ATTR_HTML: :style max-width:10%;
+# [[./mandala.png]]
 
 * Footnotes
 [fn:1] Paper authors are sorted alphabetically in cryptography (usually), so yes, I'm always in the end of the list :shrug:
