@@ -13,8 +13,7 @@
 I am a third year PhD student at the University of Edinburgh, [[https://www.ed.ac.uk/informatics/blockchain][BTL]]/[[https://www.ed.ac.uk/studying/postgraduate/degrees/index.php?r=site/view&id=493][LFCS]], working on zero-knowledge proofs and private smart contracts, advised by Dr. Markulf Kohlweiss. I finished [[https://wikimpri.dptinfo.ens-cachan.fr/doku.php][MPRI]] master's programme in 2019, and before that got my bachelor's degree from ITMO University ([[https://ditp.ifmo.ru/en/][CT]] department, 2017). I have been a part of [[https://serokell.io/][Serokell]] team in 2015-2018 working on several blockchain-related projects, Cardano SL being one of the biggest. My area of software dev expertise then was mostly haskell ecosystem related.
 
 
-
-Some things I have done or participated in recently[fn:1]:
+Recent projects[fn:1]:
 1. /Zswap: zk-SNARK Based Non-Interactive Multi-Asset Swaps/; PETS 2022. [[https://eprint.iacr.org/2022/1002.pdf][Eprint 2022/1002]], [[https://youtu.be/sUh_8sqKtzc][Talk video]].
    F. Engelmann, T. Kerber, M. Kohlweiss, M. Volkhov.
 2. [[https://crypto.ethereum.org/blog/groth-sahai-blogpost][Groth-Sahai Proofs Are Not That Scary]], blog post, 06/2022. With D. Kolonelos, D. Khovratovich, M. Maller.
@@ -41,4 +40,4 @@ My informal writing:
 # [[./mandala.png]]
 
 * Footnotes
-[fn:1] Paper authors are sorted alphabetically in cryptography (usually), so yes, I'm always in the end of the list :shrug:
+[fn:1] Paper authors are sorted alphabetically in cryptography (usually), so yes, I'm always in the end of the list ¯\_(ツ)_/¯
