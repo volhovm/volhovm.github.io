@@ -40,4 +40,4 @@ My informal writing:
 # [[./mandala.png]]
 
 * Footnotes
-[fn:1] Paper authors are sorted alphabetically in cryptography (usually), so yes, I'm always in the end of the list ¯\_(ツ)_/¯
+[fn:1] Paper authors are sorted alphabetically in cryptography (usually), so yes, I'm always in the end of the list 🤷
