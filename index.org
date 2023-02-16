@@ -17,7 +17,7 @@ I am a third year PhD student at the University of Edinburgh, [[https://www.ed.a
 Some things I have done or participated in recently[fn:1]:
 1. /Zswap: zk-SNARK Based Non-Interactive Multi-Asset Swaps/; PETS 2022. [[https://eprint.iacr.org/2022/1002.pdf][Eprint 2022/1002]], [[https://youtu.be/sUh_8sqKtzc][Talk video]].
    F. Engelmann, T. Kerber, M. Kohlweiss, M. Volkhov.
-2. [[https://crypto.ethereum.org/blog/groth-sahai-blogpost][Groth-Sahai Proofs Are Not That Scary]], blog post, 06/2022.
+2. [[https://crypto.ethereum.org/blog/groth-sahai-blogpost][Groth-Sahai Proofs Are Not That Scary]], blog post, 06/2022. With D. Kolonelos, D. Khovratovich, M. Maller.
 3. [[https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1][Linear Relations on QAP Polynomials]], blog post, 03/2021. (also [[./blog-qap/index.html][here]])
 4. /Snarky Ceremonies/: Asiacrypt 2021. [[https://eprint.iacr.org/2021/219.pdf][Eprint 2021/219]], 4th ZKProof workshop, [[https://www.youtube.com/watch?v=fo0BmpyBhS8][Talk video]].
    M. Kohlweiss, M. Maller, J. Siim, M. Volkhov.
