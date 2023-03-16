@@ -14,16 +14,17 @@ I am a third year PhD student at the University of Edinburgh, [[https://www.ed.a
 
 
 Recent projects[fn:1]:
-1. /Zswap: zk-SNARK Based Non-Interactive Multi-Asset Swaps/; PETS 2022. [[https://eprint.iacr.org/2022/1002.pdf][Eprint 2022/1002]], [[https://youtu.be/sUh_8sqKtzc][Talk video]].
+1. /Zero-Knowledge Arguments for Subverted RSA Groups/: PKC 2023, [[https://eprint.iacr.org/2023/364][Eprint 2023/364]], [[https://github.com/volhovm/rsa-zkps-impl][code]]. D. Kolonelos, M. Maller, M. Volkhov.
+2. /Zswap: zk-SNARK Based Non-Interactive Multi-Asset Swaps/; PETS 2022. [[https://eprint.iacr.org/2022/1002.pdf][Eprint 2022/1002]], [[https://youtu.be/sUh_8sqKtzc][Talk video]].
    F. Engelmann, T. Kerber, M. Kohlweiss, M. Volkhov.
-2. [[https://crypto.ethereum.org/blog/groth-sahai-blogpost][Groth-Sahai Proofs Are Not That Scary]], blog post, 06/2022. With D. Kolonelos, D. Khovratovich, M. Maller.
-3. [[https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1][Linear Relations on QAP Polynomials]], blog post, 03/2021. (also [[./blog-qap/index.html][here]])
-4. /Snarky Ceremonies/: Asiacrypt 2021. [[https://eprint.iacr.org/2021/219.pdf][Eprint 2021/219]], 4th ZKProof workshop, [[https://www.youtube.com/watch?v=fo0BmpyBhS8][Talk video]].
+3. [[https://crypto.ethereum.org/blog/groth-sahai-blogpost][Groth-Sahai Proofs Are Not That Scary]], blog post, 06/2022. With D. Kolonelos, D. Khovratovich, M. Maller.
+4. [[https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1][Linear Relations on QAP Polynomials]], blog post, 03/2021. (also [[./blog-qap/index.html][here]])
+5. /Snarky Ceremonies/: Asiacrypt 2021. [[https://eprint.iacr.org/2021/219.pdf][Eprint 2021/219]], 4th ZKProof workshop, [[https://www.youtube.com/watch?v=fo0BmpyBhS8][Talk video]].
    M. Kohlweiss, M. Maller, J. Siim, M. Volkhov.
-5. /Another Look at Extraction and Randomization of Groth's zk-SNARK/; Financial Cryptography 21, [[https://eprint.iacr.org/2020/811.pdf][Eprint 2020/811]], [[https://www.youtube.com/watch?v=Ub7wdyWQb1w][Talk video]].
+6. /Another Look at Extraction and Randomization of Groth's zk-SNARK/; Financial Cryptography 21, [[https://eprint.iacr.org/2020/811.pdf][Eprint 2020/811]], [[https://www.youtube.com/watch?v=Ub7wdyWQb1w][Talk video]].
    K. Baghery, M. Kohlweiss, J. Siim, M. Volkhov.
-6. [[https://priviledge-project.eu/news/reasoning-about-privacy-in-smart-contracts][Reasoning about Privacy in Smart Contracts]], blog post 02/2020.
-7. /Techniques, Software, and Applications for Packed Partially Homomorphic Encryption/. [[./pahedgk.pdf][Preprint]]. Master's thesis at INRIA Paris/MPRI.
+7. [[https://priviledge-project.eu/news/reasoning-about-privacy-in-smart-contracts][Reasoning about Privacy in Smart Contracts]], blog post 02/2020.
+8. /Techniques, Software, and Applications for Packed Partially Homomorphic Encryption/. [[./pahedgk.pdf][Preprint]]. Master's thesis at INRIA Paris/MPRI.
 
 My contacts:
 + Email: ~mikhail.volkhov~ АТ ~ed.ac.uk~
