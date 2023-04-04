@@ -30,7 +30,7 @@ My contacts:
 + Email: ~mikhail.volkhov~ АТ ~ed.ac.uk~
 + Github: https://github.com/volhovm
 + GPG key at [[https://keys.openpgp.org/search?q=3B88C4272A0B49C8F0B0A78CF962509771F9CD1A][keys.openpgp.org]]. FP ~3B88 C427 2A0B 49C8 F0B0 A78C F962 5097 71F9 CD1A~
-+ Social media: [[https://www.youtube.com/channel/UCT470I2k3ipNnq6jY3HvsQQ][[youtube]​]], [[https://www.instagram.com/volhovm/][[instagram]​]], [[https://soundcloud.com/volhovm/likes][[soundcloud]​]] (my nickname is ~volhovm~ almost everywhere).
++ Social media: [[https://www.youtube.com/channel/UCT470I2k3ipNnq6jY3HvsQQ][[youtube]​]], [[https://www.instagram.com/volhovm/][[instagram]​]], [[https://soundcloud.com/volhovm/likes][[soundcloud]​]], [[https://infosec.exchange/@volhovm][[mastodon]​]] (my nickname is ~volhovm~ almost everywhere).
 
 My informal writing:
 - [[./blog/N2022-10-04.html][N2022-10-04]] Про втому
