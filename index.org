@@ -1,5 +1,5 @@
 #+HUGO_BASE_DIR: ./hugo/metajoin/
-#+HTML_HEAD: <style> body > div { text-align: justify; max-width: 30em; margin: auto; } </style>
+#+HTML_HEAD: <style> body > div { text-align: justify; max-width: 30em; margin: auto; padding-left: 30px; padding-right: 30px; } </style>
 # #+HTML_HEAD: <style> @import url(http://fonts.googleapis.com/css?family=Roboto+Slab); body { font-family: "Roboto Slab", sans-serif; }  </style>
 
 #+AUTHOR: Misha Volkhov
