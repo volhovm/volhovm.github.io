@@ -13,8 +13,9 @@ You spend a weekend somewhere, maybe even not opening your computer for a few da
 #+attr_latex: :width 600px
 [[./N2023-04-13-res/agenda-bad.png]]
 
+/(Some of the tasks are fictional.)/
 
-Which in my case leads to generally assuming that I cannot do a lot of work on Monday, because Monday is ... well ... a day for stressful admin resolution.
+...which in my case leads to generally assuming that I cannot do a lot of work on Monday, because Monday is ... well ... a day for stressful admin resolution.
 And not just Monday -- quite often I have at least 20 elements in my agenda, plus calendar in firefox, plus journal, plus physical notebooks, plus you need to bring this thing to the office and that home, plus /"a delivery fee and just a few pounds for a 4-pack of Tennets luv"/.
 
 At some point I really took some time to consider the advice from a certain person who is giving me advice.
@@ -159,7 +160,6 @@ Although not novel, here is how the separation between categories in agenda is a
                       (org-deadline-warning-days 30)
                       ))
           (agenda "" ((org-agenda-span 1)
-                                        ;(org-agenda-tag-filter-preset '("-s"))
                       (org-agenda-files '("~/org/private.org"))
                       (org-agenda-format-date "")
                       (org-agenda-entry-types '(:deadline :scheduled :sexp))
