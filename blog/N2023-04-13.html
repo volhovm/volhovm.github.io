@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-04-13 Thu 15:31 -->
+<!-- 2023-04-15 Sat 13:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Visualizing Estimates in org-mode's Agenda</title>
@@ -190,54 +190,39 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+<style type="text/css">body{ max-width: 800px; margin: auto; padding-left: 30px; padding-right: 30px; text-align:justify }</style>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Visualizing Estimates in org-mode's Agenda</h1>
+<blockquote>
 <p>
-TLDR: things many, computer complex&amp;scary, visual agenda good brain control.
+<b>TLDR</b>: <i>things many, computer complex &amp; scary, visual agenda good, brain control no panic</i>.
 </p>
+</blockquote>
 
 <p>
 If you're using org-mode and tend to over-organise things hoping that that will improve your productivity or mood (which it might, or might not!), then there's a high chance you at least once found yourself in the following situation.
 You spend a weekend somewhere, maybe even not opening your computer for a few days, only to return back on Monday and see this:
 </p>
 
-<p>
-&lt;insert a scary agenda&gt;
+
+<div id="org85f47e9" class="figure">
+<p><img src="./N2023-04-13-res/agenda-bad.png" alt="agenda-bad.png" width="600px" />
 </p>
+</div>
+
 
 <p>
 Which in my case leads to generally assuming that I cannot do a lot of work on Monday, because Monday is &#x2026; well &#x2026; a day for stressful admin resolution.
-And, honestly, not just Monday &#x2013; quite often I have at least 20 elements in my agenda, plus calendar in firefox, plus journal, plus physical notebooks, plus you need to bring this thing to the office and that home, plus "delivery fee and just a few pounds for a 4-pack of Tennets luv".
+And not just Monday &#x2013; quite often I have at least 20 elements in my agenda, plus calendar in firefox, plus journal, plus physical notebooks, plus you need to bring this thing to the office and that home, plus <i>"a delivery fee and just a few pounds for a 4-pack of Tennets luv"</i>.
 </p>
 
 <p>
 At some point I really took some time to consider the advice from a certain person who is giving me advice.
-And the advice was "omg no wonder you feel like this the whole time", to which I immediately started replying "nono wait you don't understand, see &#x2013; it is this and this is that and this is a category and this colour means blocked and", and she was actually right.
+And the advice was <i>"omg no wonder you feel like this the whole time"</i>, to which I immediately started replying <i>"nono wait you don't understand, see &#x2013; it is this and this is that and this is a category and this colour means blocked and"</i>, and she was actually right.
 My agenda is quite cluttered, and ritalin won't help.
 However not using the agenda is not an option&#x2026; take it as an assumption.
 </p>
@@ -255,11 +240,11 @@ The strategies are:
 <li>And not using tags or putting tasks in different subtrees, because priorities change often, and there's no incentive to move tasks around.</li>
 <li>And not just sorting things according to categories like "social", "music", "writing" etc.</li>
 </ul></li>
-<li>Keeping tasks small and clearly stated. 
+<li>Keeping tasks small and clearly stated.
 <ul class="org-ul">
 <li>Ideally not like "Figure out problem X"</li>
 </ul></li>
-<li>Understanding time estimates and portioning tasks. Making sure it's doable within the day.
+<li>Understanding time estimates and portioning tasks. Making sure it's doable within a day.
 <ul class="org-ul">
 <li>Small tasks must <i>look</i> like they are small.</li>
 <li>If it's a big task (which it shouldn't be), the task presence in the agenda must mean doing <i>a bit</i> of that task.</li>
@@ -269,7 +254,7 @@ The strategies are:
 
 
 <p>
-If you are me and reading this you probably feel like "thanks, 5 more rules to follow, as if I don't have a million rules already".
+If you are me and reading this you probably feel like <i>"thanks, 5 more rules to follow, as if I don't have a million rules already"</i>.
 You're right!
 However, the trick is to force the <i>environment</i> to force you to do this.
 In my particular case this boils down to making agenda look nice and pretty only when all these conditions are satisfied; and ugly otherwise.
@@ -277,12 +262,15 @@ In my particular case this boils down to making agenda look nice and pretty only
 
 
 <p>
-Now, that's what my new agenda looks like now:
+Now, that's what my new agenda looks like after sorting:
 </p>
 
-<p>
-&lt;insert a tidy agenda&gt;
+
+<div id="org61c2c12" class="figure">
+<p><img src="./N2023-04-13-res/agenda-good.png" alt="agenda-good.png" width="600px" />
 </p>
+</div>
+
 
 
 <p>
@@ -291,7 +279,7 @@ This asks for some explanation:
 <ol class="org-ol">
 <li>Estimates:
 <ul class="org-ul">
-<li>The semantics of "estimate" column is "about how much of this I will do today". As I mentioned, ideally, this must mean how much the task takes in total. But if it's a "look into X" type of task, this means how much I will bite off just today. `e` sets the effort if you're in the agenda window.</li>
+<li>The semantics of "estimate" column is "about how much of this I will do today". As I mentioned, ideally, this must mean how much the task takes in total. But if it's a "look into X" type of task, this means how much I will bite off just today. <code>e</code> sets the effort if you're in the agenda window.</li>
 <li>The "estimate" column is not synchronized with org clocking. Almost. It is possible, but I like to keep it simple.</li>
 </ul></li>
 <li>Priorities:
@@ -314,23 +302,20 @@ In addition to the agenda incentivising me to fill everything in properly (irreg
 </p>
 
 <p>
-Here is a relevant piece of code that generates the pretty effort estimates:
+Here is a relevant piece of code that generates and uses the pretty effort estimates:
 </p>
 
-<div class="CODE" id="orgeda4ab1">
-<p>
-(defvar effort-ticks '(?■ ?◣)
-  "Ticks used in the progress bar. The first tick must represent the full one,
-   and consequitive N are marking half-steps in a linear way. Must be at least length 2.")
-(defvar effort-tick-size 15
-  "Number of minutes (integer) the full effort tick represents")
-</p>
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #346604;">defvar</span> <span style="color: #b35000;">effort-ticks</span> '(?&#9632; ?&#9699;)
+  <span style="color: #5c3566;">"Ticks used in the progress bar. The first tick must represent the full one,</span>
+<span style="color: #5c3566;">   and consequitive N are marking half-steps in a linear way. Must be at least length 2."</span>)
+(<span style="color: #346604;">defvar</span> <span style="color: #b35000;">effort-tick-size</span> 15
+  <span style="color: #5c3566;">"Number of minutes (integer) the full effort tick represents"</span>)
 
-<p>
-(defun effort-bar-round (minutes)
-  "Given (N, a, b) where b | a, represents N as N' = u * a + v * b, such
-   that N' is close to N, but at the same time N' &gt; 0 always."
-  (let*
+(<span style="color: #346604;">defun</span> <span style="color: #a40000;">effort-bar-round</span> (minutes)
+  <span style="color: #5c3566;">"Given (N, a, b) where b | a, represents N as N' = u * a + v * b, such</span>
+<span style="color: #5c3566;">   that N' is close to N, but at the same time N' &gt; 0 always."</span>
+  (<span style="color: #346604;">let*</span>
       ((effort-small-tick-size (/ (float effort-tick-size) (length effort-ticks)))
        (minutes-rounded
         (+ (* (/ minutes effort-tick-size) effort-tick-size)
@@ -338,74 +323,105 @@ Here is a relevant piece of code that generates the pretty effort estimates:
               effort-small-tick-size)))
        (big-ticks (floor (/ minutes-rounded effort-tick-size)))
        (quotient (- minutes-rounded (* big-ticks effort-tick-size)))
-       (small-ticks (if (= minutes-rounded 0)
+       (small-ticks (<span style="color: #346604;">if</span> (= minutes-rounded 0)
                         1
                       (round (/ quotient effort-small-tick-size))))
        )
     (cl-values big-ticks small-ticks)))
-</p>
 
-<p>
-(defun effort-bar (effort)
-  "Draws a visual effort bar to be used in agenda."
-  (if effort
-      (save-match-data
-        (when (string-match "\\([0-9]+\\):\\([0-9]+\\)" effort)
-          (let* ((hours (string-to-number (match-string 1 effort)))
+(<span style="color: #346604;">defun</span> <span style="color: #a40000;">effort-bar</span> (effort)
+  <span style="color: #5c3566;">"Draws a visual effort bar to be used in agenda."</span>
+  (<span style="color: #346604;">if</span> effort
+      (<span style="color: #346604;">save-match-data</span>
+        (<span style="color: #346604;">when</span> (string-match <span style="color: #5c3566;">"</span><span style="color: #5c3566; font-weight: bold;">\\</span><span style="color: #5c3566; font-weight: bold;">(</span><span style="color: #5c3566;">[0-9]+</span><span style="color: #5c3566; font-weight: bold;">\\</span><span style="color: #5c3566; font-weight: bold;">)</span><span style="color: #5c3566;">:</span><span style="color: #5c3566; font-weight: bold;">\\</span><span style="color: #5c3566; font-weight: bold;">(</span><span style="color: #5c3566;">[0-9]+</span><span style="color: #5c3566; font-weight: bold;">\\</span><span style="color: #5c3566; font-weight: bold;">)</span><span style="color: #5c3566;">"</span> effort)
+          (<span style="color: #346604;">let*</span> ((hours (string-to-number (match-string 1 effort)))
                  (minutes (string-to-number (match-string 2 effort)))
                  (total-minutes (+ minutes (* hours 60))))
-            (cl-multiple-value-bind
+            (<span style="color: #346604;">cl-multiple-value-bind</span>
                 (total-big-ticks total-small-ticks)
                 (effort-bar-round total-minutes)
               (concat (make-string total-big-ticks (first effort-ticks))
-                      (if (= total-small-ticks 0)
-                          ""
+                      (<span style="color: #346604;">if</span> (= total-small-ticks 0)
+                          <span style="color: #5c3566;">""</span>
                         (string (nth (- (length effort-ticks) total-small-ticks)
                                      effort-ticks))))))))
-    ""))
-</p>
+    <span style="color: #5c3566;">""</span>))
 
-<p>
-(defun effort-visual ()
-  "Prints effort + effort bar."
-  (let ((effort (org-entry-get nil "EFFORT")))
-    (if effort
-        (format "%-5s%-9s" effort (effort-bar effort))
-      "              ")))
-</p>
+(<span style="color: #346604;">defun</span> <span style="color: #a40000;">effort-visual</span> ()
+  <span style="color: #5c3566;">"Prints effort + effort bar."</span>
+  (<span style="color: #346604;">let</span> ((effort (org-entry-get nil <span style="color: #5c3566;">"EFFORT"</span>)))
+    (<span style="color: #346604;">if</span> effort
+        (format <span style="color: #5c3566;">"%-5s%-9s"</span> effort (effort-bar effort))
+      <span style="color: #5c3566;">"              "</span>)))
 
-<p>
-(setq org-agenda-prefix-format
-  '((agenda . " % t%7 s%(effort-visual)")
-    (todo . " %-8:c ")
-    (tags . " %-5:s ")
-    (search . " %-8:c ")))
-</p>
-
+(<span style="color: #346604;">setq</span> org-agenda-prefix-format
+  '((agenda . <span style="color: #5c3566;">" % t%7 s%(effort-visual)"</span>)
+    (todo . <span style="color: #5c3566;">" %-8:c "</span>)
+    (tags . <span style="color: #5c3566;">" %-5:s "</span>)
+    (search . <span style="color: #5c3566;">" %-8:c "</span>)))
+</pre>
 </div>
 
 <p>
-The symbols are font-dependent, and so:
+The symbols are font-dependent, and so I keep this comment around in my <code>.emacs</code> in case I need to adjust something after a system update:
 </p>
 
-<div class="CODE" id="org0e1efaa">
-<p>
-; <a href="https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)">https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)</a>
-; <a href="https://en.wikipedia.org/wiki/Braille_Patterns">https://en.wikipedia.org/wiki/Braille_Patterns</a>
-; <a href="https://en.wikipedia.org/wiki/Box-drawing_character">https://en.wikipedia.org/wiki/Box-drawing_character</a>
+<pre class="example">
+; https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)
+; https://en.wikipedia.org/wiki/Braille_Patterns
+; https://en.wikipedia.org/wiki/Box-drawing_character
 ;  ◐ ◔ ◕ ⬤◐
 ; ▂▄▅▆▇█
 ;   ▉▋▋▌▍▏
 ; ▪■◼◼︎◼■▤▦◧▣◼□▢◻▯◺◣
 ; ⣿⣧⡇⡄ ⣷ ⣦ ⣇ ⣄ ⠶
 ; ◭▲
+</pre>
+
+<p>
+Everything else, except for these visual estimates, is a default feature of emacs.
+Although not novel, here is how the separation between categories in agenda is achieved:
 </p>
 
+<div class="org-src-container">
+<pre class="src src-elisp">(<span style="color: #346604;">setq</span> org-agenda-custom-commands
+      '((<span style="color: #5c3566;">"w"</span> <span style="color: #5c3566;">"Week agenda"</span>
+         (
+          (agenda <span style="color: #5c3566;">""</span> ((org-agenda-span 7)
+                      (org-agenda-start-on-weekday nil) <span style="color: #5f615c; font-style: italic;">; </span><span style="color: #5f615c; font-style: italic;">starting today</span>
+                      (org-agenda-entry-types '(<span style="color: #75507b;">:deadline</span> <span style="color: #75507b;">:scheduled</span> <span style="color: #75507b;">:sexp</span>))
+                      (org-deadline-warning-days 30)))))
+        (<span style="color: #5c3566;">"a"</span> <span style="color: #5c3566;">"Single day agenda"</span>
+         (
+          (agenda <span style="color: #5c3566;">""</span> ((org-agenda-span 1)
+                      (org-agenda-files '(<span style="color: #5c3566;">"~/org/study.org"</span>))
+                      (org-agenda-entry-types '(<span style="color: #75507b;">:deadline</span> <span style="color: #75507b;">:scheduled</span> <span style="color: #75507b;">:sexp</span>))
+                      (org-agenda-format-date <span style="color: #5c3566;">""</span>)
+                      (org-agenda-overriding-header <span style="color: #5c3566;">"   Academic/Office"</span>)
+                      (org-deadline-warning-days 30)
+                      ))
+          (agenda <span style="color: #5c3566;">""</span> ((org-agenda-span 1)
+                                        <span style="color: #5f615c; font-style: italic;">;</span><span style="color: #5f615c; font-style: italic;">(org-agenda-tag-filter-preset '("-s"))</span>
+                      (org-agenda-files '(<span style="color: #5c3566;">"~/org/private.org"</span>))
+                      (org-agenda-format-date <span style="color: #5c3566;">""</span>)
+                      (org-agenda-entry-types '(<span style="color: #75507b;">:deadline</span> <span style="color: #75507b;">:scheduled</span> <span style="color: #75507b;">:sexp</span>))
+                      (org-deadline-warning-days 30)
+                      (org-agenda-overriding-header <span style="color: #5c3566;">"   Private"</span>)
+                      ))))))
+</pre>
 </div>
+
+<p>
+One nice extra bonus is that daily agenda is generated significantly faster than a weekly one. If you were searching for a way to speed up your agenda generation, that's as far as I know the most effective one.
+</p>
+
+<p>
+And that's it! It kind of works, both technically and behaviorally; or at least it works for me ©.
+</p>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2023-04-13 Thu 14:49</p>
-<p class="date">Created: 2023-04-13 Thu 15:31</p>
+<p class="date">Created: 2023-04-15 Sat 13:02</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

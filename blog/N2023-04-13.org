@@ -1,5 +1,6 @@
 #+TITLE: Visualizing Estimates in org-mode's Agenda
 #+DATE: [2023-04-13 Thu 14:49]
+#+HTML_HEAD: <style type="text/css">body{ max-width: 800px; margin: auto; padding-left: 30px; padding-right: 30px; text-align:justify }</style>
 
 #+BEGIN_QUOTE
 *TLDR*: /things many, computer complex & scary, visual agenda good, brain control no panic/.
@@ -8,7 +9,10 @@
 If you're using org-mode and tend to over-organise things hoping that that will improve your productivity or mood (which it might, or might not!), then there's a high chance you at least once found yourself in the following situation.
 You spend a weekend somewhere, maybe even not opening your computer for a few days, only to return back on Monday and see this:
 
-<insert a scary agenda>
+#+attr_html: :width 600px
+#+attr_latex: :width 600px
+[[./N2023-04-13-res/agenda-bad.png]]
+
 
 Which in my case leads to generally assuming that I cannot do a lot of work on Monday, because Monday is ... well ... a day for stressful admin resolution.
 And not just Monday -- quite often I have at least 20 elements in my agenda, plus calendar in firefox, plus journal, plus physical notebooks, plus you need to bring this thing to the office and that home, plus /"a delivery fee and just a few pounds for a 4-pack of Tennets luv"/.
@@ -38,17 +42,17 @@ However, the trick is to force the /environment/ to force you to do this.
 In my particular case this boils down to making agenda look nice and pretty only when all these conditions are satisfied; and ugly otherwise.
 
 
-Now, that's what my new agenda looks like now:
+Now, that's what my new agenda looks like after sorting:
 
 #+attr_html: :width 600px
 #+attr_latex: :width 600px
-[[./agenda-good.png]]
+[[./N2023-04-13-res/agenda-good.png]]
 
 
 
 This asks for some explanation:
 1. Estimates:
-   - The semantics of "estimate" column is "about how much of this I will do today". As I mentioned, ideally, this must mean how much the task takes in total. But if it's a "look into X" type of task, this means how much I will bite off just today. `e` sets the effort if you're in the agenda window.
+   - The semantics of "estimate" column is "about how much of this I will do today". As I mentioned, ideally, this must mean how much the task takes in total. But if it's a "look into X" type of task, this means how much I will bite off just today. ~e~ sets the effort if you're in the agenda window.
    - The "estimate" column is not synchronized with org clocking. Almost. It is possible, but I like to keep it simple.
 2. Priorities:
    - The A B C D priorities correspond to the four squares I mentioned earlier.
@@ -137,7 +141,7 @@ The symbols are font-dependent, and so I keep this comment around in my ~.emacs~
 Everything else, except for these visual estimates, is a default feature of emacs.
 Although not novel, here is how the separation between categories in agenda is achieved:
 
-#+BEGIN_SRC elisp
+#+BEGIN_SRC elisp :width 300px
 (setq org-agenda-custom-commands
       '(("w" "Week agenda"
          (

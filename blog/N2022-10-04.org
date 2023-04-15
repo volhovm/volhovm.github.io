@@ -1,5 +1,6 @@
 #+TITLE: Про втому
 #+DATE: [2022-05-14 Sat 20:50]
+#+HTML_HEAD: <style type="text/css">body{ max-width: 600px; margin: auto; padding-left: 30px; padding-right: 30px; text-align:justify }</style>
 
 #+BEGIN_VERSE
 Схрещені руки гріють мої груди, ще ніби повні життя.

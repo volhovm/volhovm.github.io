@@ -33,6 +33,7 @@ My contacts:
 + Social media: [[https://www.youtube.com/channel/UCT470I2k3ipNnq6jY3HvsQQ][[youtube]​]], [[https://www.instagram.com/volhovm/][[instagram]​]], [[https://soundcloud.com/volhovm/likes][[soundcloud]​]], [[https://infosec.exchange/@volhovm][[mastodon]​]] (my nickname is ~volhovm~ almost everywhere).
 
 My informal writing:
+- [[./blog/N2023-04-13.html][N2023-04-13]] Visualizing Estimates in org-mode's Agenda
 - [[./blog/N2022-10-04.html][N2022-10-04]] Про втому
 - [[./blog/N2022-05-14.html][N2022-05-14]] Зарисовка первого дня
 
