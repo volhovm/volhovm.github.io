@@ -18,7 +18,7 @@ Recent projects[fn:1]:
 2. /Zswap: zk-SNARK Based Non-Interactive Multi-Asset Swaps/; PETS 2022. [[https://eprint.iacr.org/2022/1002.pdf][Eprint 2022/1002]], [[https://youtu.be/sUh_8sqKtzc][Talk video]].
    F. Engelmann, T. Kerber, M. Kohlweiss, M. Volkhov.
 3. [[https://crypto.ethereum.org/blog/groth-sahai-blogpost][Groth-Sahai Proofs Are Not That Scary]], blog post, 06/2022. With D. Kolonelos, D. Khovratovich, M. Maller.
-4. [[https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1][Linear Relations on QAP Polynomials]], blog post, 03/2021. (also [[./blog-qap/index.html][here]])
+4. [[./blog/qap-linear-relations/index.html][Linear Relations on QAP Polynomials]], blog post, 03/2021 (originally on the [[https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1][PRIViLEDGE EU HORIZON 2020]] website).
 5. /Snarky Ceremonies/: Asiacrypt 2021. [[https://eprint.iacr.org/2021/219.pdf][Eprint 2021/219]], 4th ZKProof workshop, [[https://www.youtube.com/watch?v=fo0BmpyBhS8][Talk video]].
    M. Kohlweiss, M. Maller, J. Siim, M. Volkhov.
 6. /Another Look at Extraction and Randomization of Groth's zk-SNARK/; Financial Cryptography 21, [[https://eprint.iacr.org/2020/811.pdf][Eprint 2020/811]], [[https://www.youtube.com/watch?v=Ub7wdyWQb1w][Talk video]].

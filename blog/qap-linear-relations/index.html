@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-02 Fri 20:23 -->
+<!-- 2023-04-15 Sat 13:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Linear Relations on QAP Polynomials</title>
@@ -191,9 +191,9 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
-<style> body > div { text-align: justify; max-width: 50em; margin: auto; } </style>
+<style> body > div { text-align: justify; max-width: 50em; margin: auto; padding-left: 30px; padding-right: 30px; } </style>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         displayAlign: "center",
@@ -223,26 +223,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org544ba05">1. QAP and R1CS</a></li>
-<li><a href="#org32b1361">2. QAP Linear Independence Requirement</a></li>
-<li><a href="#org7967c09">3. Relevant Resources</a></li>
-<li><a href="#orgbaacd7b">4. Aligned Linear Independence</a></li>
-<li><a href="#org6ec6e01">5. Non-Aligned Linear Independence</a></li>
-<li><a href="#orgbad82d1">6. References</a></li>
+<li><a href="#orgedbd480">1. QAP and R1CS</a></li>
+<li><a href="#orgb8787a7">2. QAP Linear Independence Requirement</a></li>
+<li><a href="#org02a5daf">3. Relevant Resources</a></li>
+<li><a href="#orgea70c30">4. Aligned Linear Independence</a></li>
+<li><a href="#org0058238">5. Non-Aligned Linear Independence</a></li>
+<li><a href="#org71c936e">6. References</a></li>
 </ul>
 </div>
 </div>
 <p>
-<i>(this is a copy of the post originally posted <a href="https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1">here</a>)</i>
+<i>(this is a copy of the note originally posted <a href="https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1">here</a> as part of PRIViLEDGE project, part of EU 2020 HORIZON; however that website seems to have died)</i>
 </p>
 
 <p>
-To use zk-SNARKs in bigger protocols, we must prove their security in an "extended" environment, that is considering all possible interactions of the zk-SNARK primitive with other protocols. Universal Composability (UC, <a href="#org34f651a">[1]​</a>) is a security framework that allows modelling precisely that, and it is a common target for security proofs of protocols, aimed at privacy and zero-knowledge <a href="#orgbcb2b5f">[2</a>,<a href="#org96e6b62">3</a>,<a href="#orgddbc4d7">4</a>,<a href="#orgacfdcc6">5]​</a>. However, one cannot use zk-SNARKs in UC proofs directly &#x2014; this is a known issue stemming from the fact that (standard model) SNARKs are succinct, and thus inherently <i>white-box</i> <a href="#org605dde6">[6]​</a>, which intuitively means that security definitions must assume knowledge of the code of the adversary. Such an assumption is stronger than what UC works with, and therefore one must resort to alternative techniques. One option is to use a non-succinct NIZK (e.g. Gro06 <a href="#org45fc5f6">[7]​</a>), but this comes at the cost of performance, and may even render the protocol impractical. Another way is to apply certain transformations that make a SNARK black-box secure (e.g. C0C0 framework <a href="#orgf05bd99">[16]​</a>).
+To use zk-SNARKs in bigger protocols, we must prove their security in an "extended" environment, that is considering all possible interactions of the zk-SNARK primitive with other protocols. Universal Composability (UC, <a href="#org75e3053">[1]​</a>) is a security framework that allows modelling precisely that, and it is a common target for security proofs of protocols, aimed at privacy and zero-knowledge <a href="#orge7a9eb5">[2</a>,<a href="#orge83197e">3</a>,<a href="#orgc2f71af">4</a>,<a href="#orgd75a6a7">5]​</a>. However, one cannot use zk-SNARKs in UC proofs directly &#x2014; this is a known issue stemming from the fact that (standard model) SNARKs are succinct, and thus inherently <i>white-box</i> <a href="#org9a8ed80">[6]​</a>, which intuitively means that security definitions must assume knowledge of the code of the adversary. Such an assumption is stronger than what UC works with, and therefore one must resort to alternative techniques. One option is to use a non-succinct NIZK (e.g. Gro06 <a href="#org45a733d">[7]​</a>), but this comes at the cost of performance, and may even render the protocol impractical. Another way is to apply certain transformations that make a SNARK black-box secure (e.g. C0C0 framework <a href="#org8e1b4e4">[16]​</a>).
 </p>
 
 <p>
-In our recent work <a href="#orgfb0143d">[8]​</a>, we show two results that help to overcome this problem.
-First, we investigate a new security notion, which allows proof randomization (called <i>weak SE</i>), and show that Groth16 SNARK <a href="#org351a2d2">[9]​</a>, which is nearly-optimal and is commonly used, achieves it.
+In our recent work <a href="#orgcc140d0">[8]​</a>, we show two results that help to overcome this problem.
+First, we investigate a new security notion, which allows proof randomization (called <i>weak SE</i>), and show that Groth16 SNARK <a href="#orgc3068cb">[9]​</a>, which is nearly-optimal and is commonly used, achieves it.
 Second, we show that with the help of this new security notion one can build black-box constructions that realize a (randomizable) UC functionality.
 This is often enough for practical applications, and comes at a smaller performance overhead than heavier transformations.
 </p>
@@ -251,8 +251,8 @@ This is often enough for practical applications, and comes at a smaller performa
 In this article, however, we focus on a technical detail that arises in our work, and which was observed before. This detail is a <i>QAP linear and span independence</i> requirement, that is assumed by our security theorems. We believe that this property, although investigated before, was not sufficiently explained, and this article tries therefore to fill this gap.
 </p>
 
-<div id="outline-container-org544ba05" class="outline-2">
-<h2 id="org544ba05"><span class="section-number-2">1.</span> QAP and R1CS</h2>
+<div id="outline-container-orgedbd480" class="outline-2">
+<h2 id="orgedbd480"><span class="section-number-2">1.</span> QAP and R1CS</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We first remind the reader how arithmetic circuits are constructed and what a Quadratic Arithmetic Program is.
@@ -270,13 +270,13 @@ We assume that there is a single output wire of a circuit that is connected to t
 </p>
 
 
-<div id="orgfd9891e" class="figure">
+<div id="org443ecdf" class="figure">
 <p><img src="./qap-2.png" alt="qap-2.png" width="400px" />
 </p>
 </div>
 
 <p>
-Now, a Quadratic Arithmetic Circuit (<a href="#org2b5bcda">[15]​</a>, QAP) for this circuit \(C\) consists of the quotient polynomial \(t(X)\) of degree \(n\), and three sets of polynomials \(\{u_i(X), v_i(X), w_i(X)\}_{i=0}^m\) of degree \(n-1\).
+Now, a Quadratic Arithmetic Circuit (<a href="#org3c2af17">[15]​</a>, QAP) for this circuit \(C\) consists of the quotient polynomial \(t(X)\) of degree \(n\), and three sets of polynomials \(\{u_i(X), v_i(X), w_i(X)\}_{i=0}^m\) of degree \(n-1\).
 The main property of this system is that the assignment \(\{a_i\}\) in \(C\) is valid if and only if \((\sum a_i u_i(X))(\sum a_i v_i(X)) - (\sum a_i w_i(X)) = 0\) modulo \(t(X)\).
 </p>
 
@@ -297,14 +297,14 @@ In other words, QAP polynomials <i>interpolate</i> R1CS constraints, and the QAP
 Here is how it looks like. On the top we present R1CS constraints evaluated on some (grey) vector of wire values. On the bottom we show a corresponding QAP, which is, when evaluated on \(X = r_j\) (or equivalently viewed modulo \(t_j(X)\)), becomes the second R1CS constraint.
 </p>
 
-<div id="org2bf54c7" class="figure">
+<div id="orgcd2b7c7" class="figure">
 <p><img src="./qap-4.png" alt="qap-4.png" width="600px" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org32b1361" class="outline-2">
-<h2 id="org32b1361"><span class="section-number-2">2.</span> QAP Linear Independence Requirement</h2>
+<div id="outline-container-orgb8787a7" class="outline-2">
+<h2 id="orgb8787a7"><span class="section-number-2">2.</span> QAP Linear Independence Requirement</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 In our weak SE proof of Groth16 (and also in the proof of our second black-box construction), we use
@@ -312,7 +312,7 @@ the assumption that \({u_0(X) \ldots u_l(X)}\) are linearly independent (LID), a
 that furthermore the span of this set does not intersect with the span of
 \({u_{l+1}(X)\ldots u_m(X)}\), that is the two sets are mutually linearly independent.
 This assumption was introduced previously, and it also appears, for instance,
-in Groth-Maller17 <a href="#org7cb3990">[10]​</a>, and <a href="#orgf4232e6">[11]​</a>.
+in Groth-Maller17 <a href="#org8f5b123">[10]​</a>, and <a href="#orgd1616da">[11]​</a>.
 But what is the intuition behind this property, and why is it reasonable to
 assume it?
 </p>
@@ -322,31 +322,31 @@ First, recall that by linear independence of \(\{u_i(X)\}_{\mathcal{I}}\) for so
 </p>
 </div>
 </div>
-<div id="outline-container-org7967c09" class="outline-2">
-<h2 id="org7967c09"><span class="section-number-2">3.</span> Relevant Resources</h2>
+<div id="outline-container-org02a5daf" class="outline-2">
+<h2 id="org02a5daf"><span class="section-number-2">3.</span> Relevant Resources</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-Most of the public resources on the issue lead in one way or another to the following discussion of a bug in the zk-SNARK by Ben-Sasson et al. <a href="#orgf4232e6">[11]​</a>.
+Most of the public resources on the issue lead in one way or another to the following discussion of a bug in the zk-SNARK by Ben-Sasson et al. <a href="#orgd1616da">[11]​</a>.
 The following list attempts to summarize the public information covering the issue of QAP linear independence.
 </p>
 <ul class="org-ul">
-<li>The zk-SNARK presented in <a href="#orgf4232e6">[11]​</a> is built on Pinocchio, and its Lemma 2.4, claiming the existence of QAP for circuits, also says that the constructed QAP satisfies a "non-degeneracy" condition. The original version of the paper by this means that \(\{u_i(X)\}_{i=0}^l\) are non-zero and distinct.</li>
-<li>The note by Brian Parno <a href="#orgcd25a08">[12]​</a> describes a bug that does not appear in Pinocchio, but is present in the original technical (full) version of <a href="#orgf4232e6">[11]​</a>, precisely in this non-degeneracy condition. The bug does not merely add instance-malleability to the proofs, but breaks soundness of the NIZK. The new, revised version of <a href="#orgf4232e6">[11]​</a>, now states (in the same Lemma 2.4) that \(u_i(X)\) are linearly independent for the first \(l\) (input) wires. Furthermore, the new version suggests how to satisfy this requirement: adding \(1+l\) constraints is enough to achieve the non-linearity condition: \(1 \cdot 0 = 0\) and \(a_i \cdot 0 = 0\) for \(i \in [1,l]\).</li>
-<li>The <a href="https://leastauthority.com/blog/a-bug-in-libsnark/">blog post</a> by Least Authority called "A Bug in libsnark" describes this very same bug, but with respect to the particular implementation in <code>libsnark</code>, in the module that converts R1CS to QAP. More details on the bug are provided, essentially describing the same technique of adding \(n+1\) linear constraints as in the new version of <a href="#orgf4232e6">[11]​</a>.</li>
-<li>The <a href="http://coders-errand.com/how-to-build-a-quadratic-arithmetic-program/">blog post</a> by Alex Pinto, "How to Build a Quadratic Arithmetic Program", following <a href="#orgf4232e6">[11]​</a>, mentions that the non-degeneracy condition constraints must be introduced for conversion from R1CS to QAP, that lead to QAP linear independence, without giving a detailed explanation.</li>
-<li>Ariel Gabizon in the eprint note <a href="#orgc102398">[13]​</a> identifies another issue with <a href="#orgf4232e6">[11]​</a>. The proposed way to fix it (Section 3) also includes the linear disjointness condition (span independence), as in our work. They notice that this condition is also satisfied in QAP of <code>libsnark</code>, and also that it appears in a relevant MPC protocol for SNARK public parameters generation <a href="#org1baa46d">[14]​</a>.
-The updated version of <a href="#orgf4232e6">[11]​</a> now contains this condition too, and the Remark 2.5 now also includes a comment on it.</li>
+<li>The zk-SNARK presented in <a href="#orgd1616da">[11]​</a> is built on Pinocchio, and its Lemma 2.4, claiming the existence of QAP for circuits, also says that the constructed QAP satisfies a "non-degeneracy" condition. The original version of the paper by this means that \(\{u_i(X)\}_{i=0}^l\) are non-zero and distinct.</li>
+<li>The note by Brian Parno <a href="#org84936fb">[12]​</a> describes a bug that does not appear in Pinocchio, but is present in the original technical (full) version of <a href="#orgd1616da">[11]​</a>, precisely in this non-degeneracy condition. The bug does not merely add instance-malleability to the proofs, but breaks soundness of the NIZK. The new, revised version of <a href="#orgd1616da">[11]​</a>, now states (in the same Lemma 2.4) that \(u_i(X)\) are linearly independent for the first \(l\) (input) wires. Furthermore, the new version suggests how to satisfy this requirement: adding \(1+l\) constraints is enough to achieve the non-linearity condition: \(1 \cdot 0 = 0\) and \(a_i \cdot 0 = 0\) for \(i \in [1,l]\).</li>
+<li>The <a href="https://leastauthority.com/blog/a-bug-in-libsnark/">blog post</a> by Least Authority called "A Bug in libsnark" describes this very same bug, but with respect to the particular implementation in <code>libsnark</code>, in the module that converts R1CS to QAP. More details on the bug are provided, essentially describing the same technique of adding \(n+1\) linear constraints as in the new version of <a href="#orgd1616da">[11]​</a>.</li>
+<li>The <a href="http://coders-errand.com/how-to-build-a-quadratic-arithmetic-program/">blog post</a> by Alex Pinto, "How to Build a Quadratic Arithmetic Program", following <a href="#orgd1616da">[11]​</a>, mentions that the non-degeneracy condition constraints must be introduced for conversion from R1CS to QAP, that lead to QAP linear independence, without giving a detailed explanation.</li>
+<li>Ariel Gabizon in the eprint note <a href="#org2d3fd5e">[13]​</a> identifies another issue with <a href="#orgd1616da">[11]​</a>. The proposed way to fix it (Section 3) also includes the linear disjointness condition (span independence), as in our work. They notice that this condition is also satisfied in QAP of <code>libsnark</code>, and also that it appears in a relevant MPC protocol for SNARK public parameters generation <a href="#orgcdddae4">[14]​</a>.
+The updated version of <a href="#orgd1616da">[11]​</a> now contains this condition too, and the Remark 2.5 now also includes a comment on it.</li>
 </ul>
 
 
 <p>
-Other than that, there is little or no information on the LID requirement, and even the presented articles do not explain how exactly does the transformation of <a href="#orgf4232e6">[11]​</a> work.
+Other than that, there is little or no information on the LID requirement, and even the presented articles do not explain how exactly does the transformation of <a href="#orgd1616da">[11]​</a> work.
 This note attempts to provide some explanation and description of the mentioned linear and span independence properties.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbaacd7b" class="outline-2">
-<h2 id="orgbaacd7b"><span class="section-number-2">4.</span> Aligned Linear Independence</h2>
+<div id="outline-container-orgea70c30" class="outline-2">
+<h2 id="orgea70c30"><span class="section-number-2">4.</span> Aligned Linear Independence</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 It is tempting to intuitively connect the linear independence condition of \(u_i(X)\) with some circuit property.
@@ -392,14 +392,14 @@ These few examples should give <i>some</i> intuition about what circuits can hav
 </p>
 </div>
 </div>
-<div id="outline-container-org6ec6e01" class="outline-2">
-<h2 id="org6ec6e01"><span class="section-number-2">5.</span> Non-Aligned Linear Independence</h2>
+<div id="outline-container-org0058238" class="outline-2">
+<h2 id="org0058238"><span class="section-number-2">5.</span> Non-Aligned Linear Independence</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 The <b>non-aligned</b> linear independence of \(\{u_i(X)\}\) is a stronger requirement than the aligned variant we just overviewed: whenever \(\{u_i(X)\}\) are LID, the whole QAP is aligned LID.
 (This is easy to see, as when we have aligned LD with coefficients \(\{k_i\}\) for some set of indices \(\mathcal{I}\), the same set of coefficients forms linearly dependent combinations for each \(u_i(X),v_i(X),w_i(X)\)).
 In the previous case of aligned LID we merely used QAP correctness (that is, the QAP equation) to deduce the intuition of linear dependency of wires.
-Now, to analyse non-aligned linear independence of each \({p_i(X)}\) separately, we will check if this desired linear independence condition can be satisfied by construction <a href="#org2b5bcda">[15]​</a>.
+Now, to analyse non-aligned linear independence of each \({p_i(X)}\) separately, we will check if this desired linear independence condition can be satisfied by construction <a href="#org3c2af17">[15]​</a>.
 We remind that what we need to achieve for our theorem to go through is: \(\{u_i(X)\}_{0}^l\) LID, and \(\text{Span}(\{u_i(X)\}_0^l) \cap \text{Span}(\{u_i(X)\}_{l+1}^m) = \emptyset\).
 </p>
 
@@ -417,7 +417,7 @@ Therefore, if \(u_i(X)\) are LD, then all these equations are satisfied over
 all \(t_j(X)\): for each gate \(j\), for each corresponding \(A_{j}\), the set of \(k_i\) satisfies the dot product w.r.t. \(A_{j,i}\).
 On the contrary, what linear <i>independence</i> would imply, is that for any \({k_i}\) there is at least one gate that
 this combination does not work with.
-We can achieve LID for a subset of wires by performing a simple circuit transformation, as suggested in <a href="#orgf4232e6">[11]​</a>.
+We can achieve LID for a subset of wires by performing a simple circuit transformation, as suggested in <a href="#orgd1616da">[11]​</a>.
 </p>
 
 <p>
@@ -429,7 +429,7 @@ Similarly, for \(u_0(X)\) we create a single gate (number \(0\)) that takes the 
 </p>
 
 
-<div id="org0b0da37" class="figure">
+<div id="org4134e50" class="figure">
 <p><img src="./qap-3.png" alt="qap-3.png" width="400px" />
 </p>
 </div>
@@ -451,7 +451,7 @@ So \(f(X) = 0\), a contradiction, which proves span independence.
 </p>
 
 <p>
-<i>This shows why the transformation of <a href="#orgf4232e6">[11]​</a> is enough to satisfy both conditions necessary for the theorems in our work <a href="#orgfb0143d">[8]​</a>.</i>
+<i>This shows why the transformation of <a href="#orgd1616da">[11]​</a> is enough to satisfy both conditions necessary for the theorems in our work <a href="#orgcc140d0">[8]​</a>.</i>
 </p>
 
 <p>
@@ -475,26 +475,26 @@ Thus, we arrive at a contradiction, and the whole QAP is aligned LID.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbad82d1" class="outline-2">
-<h2 id="orgbad82d1"><span class="section-number-2">6.</span> References</h2>
+<div id="outline-container-org71c936e" class="outline-2">
+<h2 id="org71c936e"><span class="section-number-2">6.</span> References</h2>
 <div class="outline-text-2" id="text-6">
 <ol class="org-ol">
-<li><a id="org34f651a"></a> Canetti, Ran. "Universally composable security: A new paradigm for cryptographic protocols." In Proceedings 42nd IEEE Symposium on Foundations of Computer Science, pp. 136-145. IEEE, 2001.</li>
-<li><a id="orgbcb2b5f"></a> Kosba, Ahmed, Andrew Miller, Elaine Shi, Zikai Wen, and Charalampos Papamanthou. "Hawk: The blockchain model of cryptography and privacy-preserving smart contracts." In 2016 IEEE symposium on security and privacy (SP), pp. 839-858. IEEE, 2016.</li>
-<li><a id="org96e6b62"></a> Kerber, Thomas, Aggelos Kiayias, and Markulf Kohlweiss. "Kachina-Foundations of Private Smart Contracts." IACR Cryptol. ePrint Arch. 2020 (2020): 543.</li>
-<li><a id="orgddbc4d7"></a> Kerber, Thomas, Aggelos Kiayias, and Markulf Kohlweiss. "Mining for Privacy: How to Bootstrap a Snarky Blockchain." IACR Cryptol. ePrint Arch. 2020 (2020): 401.</li>
-<li><a id="orgacfdcc6"></a> Kerber, Thomas, Aggelos Kiayias, Markulf Kohlweiss, and Vassilis Zikas. "Ouroboros crypsinous: Privacy-preserving proof-of-stake." In 2019 IEEE Symposium on Security and Privacy (SP), pp. 157-174. IEEE, 2019.</li>
-<li><a id="org605dde6"></a> Gentry, Craig, and Daniel Wichs. "Separating succinct non-interactive arguments from all falsifiable assumptions." In Proceedings of the forty-third annual ACM symposium on Theory of computing, pp. 99-108. 2011.</li>
-<li><a id="org45fc5f6"></a> Groth, Jens. "Simulation-sound NIZK proofs for a practical language and constant size group signatures." In International Conference on the Theory and Application of Cryptology and Information Security, pp. 444-459. Springer, Berlin, Heidelberg, 2006.</li>
-<li><a id="orgfb0143d"></a> Baghery, Karim, Markulf Kohlweiss, Janno Siim, and Mikhail Volkhov. "Another look at extraction and randomization of Groth’s zk-SNARK." FC 2021 (2021).</li>
-<li><a id="org351a2d2"></a> Groth, Jens. "On the size of pairing-based non-interactive arguments." In Annual international conference on the theory and applications of cryptographic techniques, pp. 305-326. Springer, Berlin, Heidelberg, 2016.</li>
-<li><a id="org7cb3990"></a> Groth, Jens, and Mary Maller. "Snarky signatures: Minimal signatures of knowledge from simulation-extractable SNARKs." In Annual International Cryptology Conference, pp. 581-612. Springer, Cham, 2017.</li>
-<li><a id="orgf4232e6"></a> Ben-Sasson, Eli, Alessandro Chiesa, Eran Tromer, and Madars Virza. "Succinct non-interactive zero knowledge for a von Neumann architecture." In 23rd {USENIX} Security Symposium ({USENIX} Security 14), pp. 781-796. 2014.</li>
-<li><a id="orgcd25a08"></a> Parno, Bryan. "A Note on the Unsoundness of vnTinyRAM's SNARK." IACR Cryptol. ePrint Arch. 2015 (2015): 437.</li>
-<li><a id="orgc102398"></a> Gabizon, Ariel. "On the security of the BCTV Pinocchio zk-SNARK variant." IACR Cryptol. ePrint Arch. 2019 (2019): 119.</li>
-<li><a id="org1baa46d"></a> Bowe, Sean, Ariel Gabizon, and Matthew D. Green. "A multi-party protocol for constructing the public parameters of the Pinocchio zk-SNARK." In International Conference on Financial Cryptography and Data Security, pp. 64-77. Springer, Berlin, Heidelberg, 2018.</li>
-<li><a id="org2b5bcda"></a> Gennaro, Rosario, Craig Gentry, Bryan Parno, and Mariana Raykova. "Quadratic span programs and succinct NIZKs without PCPs." In Annual International Conference on the Theory and Applications of Cryptographic Techniques, pp. 626-645. Springer, Berlin, Heidelberg, 2013.</li>
-<li><a id="orgf05bd99"></a> Kosba, Ahmed, Zhichao Zhao, Andrew Miller, Yi Qian, H. Chan, Charalampos PAPAMAN-THOU, Rafael Pass, SHELAT ABHI, and EC SHI. "C∅ C∅: A framework for building composable zero-knowledge proofs." Cryptology ePrint Archive, Report 2015/1093 (2015).</li>
+<li><a id="org75e3053"></a> Canetti, Ran. <i>"Universally composable security: A new paradigm for cryptographic protocols."</i> In Proceedings 42nd IEEE Symposium on Foundations of Computer Science, pp. 136-145. IEEE, 2001.</li>
+<li><a id="orge7a9eb5"></a> Kosba, Ahmed, Andrew Miller, Elaine Shi, Zikai Wen, and Charalampos Papamanthou. <i>"Hawk: The blockchain model of cryptography and privacy-preserving smart contracts."</i> In 2016 IEEE symposium on security and privacy (SP), pp. 839-858. IEEE, 2016.</li>
+<li><a id="orge83197e"></a> Kerber, Thomas, Aggelos Kiayias, and Markulf Kohlweiss. <i>"Kachina-Foundations of Private Smart Contracts."</i> IACR Cryptol. ePrint Arch. 2020 (2020): 543.</li>
+<li><a id="orgc2f71af"></a> Kerber, Thomas, Aggelos Kiayias, and Markulf Kohlweiss. <i>"Mining for Privacy: How to Bootstrap a Snarky Blockchain."</i> IACR Cryptol. ePrint Arch. 2020 (2020): 401.</li>
+<li><a id="orgd75a6a7"></a> Kerber, Thomas, Aggelos Kiayias, Markulf Kohlweiss, and Vassilis Zikas. <i>"Ouroboros crypsinous: Privacy-preserving proof-of-stake."</i> In 2019 IEEE Symposium on Security and Privacy (SP), pp. 157-174. IEEE, 2019.</li>
+<li><a id="org9a8ed80"></a> Gentry, Craig, and Daniel Wichs. <i>"Separating succinct non-interactive arguments from all falsifiable assumptions."</i> In Proceedings of the forty-third annual ACM symposium on Theory of computing, pp. 99-108. 2011.</li>
+<li><a id="org45a733d"></a> Groth, Jens. <i>"Simulation-sound NIZK proofs for a practical language and constant size group signatures."</i> In International Conference on the Theory and Application of Cryptology and Information Security, pp. 444-459. Springer, Berlin, Heidelberg, 2006.</li>
+<li><a id="orgcc140d0"></a> Baghery, Karim, Markulf Kohlweiss, Janno Siim, and Mikhail Volkhov. <i>"Another look at extraction and randomization of Groth’s zk-SNARK."</i> FC 2021 (2021).</li>
+<li><a id="orgc3068cb"></a> Groth, Jens. <i>"On the size of pairing-based non-interactive arguments."</i> In Annual international conference on the theory and applications of cryptographic techniques, pp. 305-326. Springer, Berlin, Heidelberg, 2016.</li>
+<li><a id="org8f5b123"></a> Groth, Jens, and Mary Maller. <i>"Snarky Signatures: Minimal Signatures of Knowledge from Simulation-Extractable SNARKs."</i> In Annual International Cryptology Conference, pp. 581-612. Springer, Cham, 2017.</li>
+<li><a id="orgd1616da"></a> Ben-Sasson, Eli, Alessandro Chiesa, Eran Tromer, and Madars Virza. <i>"Succinct non-interactive zero knowledge for a von Neumann architecture."</i> In 23rd {USENIX} Security Symposium ({USENIX} Security 14), pp. 781-796. 2014.</li>
+<li><a id="org84936fb"></a> Parno, Bryan. <i>"A Note on the Unsoundness of vnTinyRAM's SNARK."</i> IACR Cryptol. ePrint Arch. 2015 (2015): 437.</li>
+<li><a id="org2d3fd5e"></a> Gabizon, Ariel. <i>"On the security of the BCTV Pinocchio zk-SNARK variant."</i> IACR Cryptol. ePrint Arch. 2019 (2019): 119.</li>
+<li><a id="orgcdddae4"></a> Bowe, Sean, Ariel Gabizon, and Matthew D. Green. <i>"A multi-party protocol for constructing the public parameters of the Pinocchio zk-SNARK."</i> In International Conference on Financial Cryptography and Data Security, pp. 64-77. Springer, Berlin, Heidelberg, 2018.</li>
+<li><a id="org3c2af17"></a> Gennaro, Rosario, Craig Gentry, Bryan Parno, and Mariana Raykova. <i>"Quadratic span programs and succinct NIZKs without PCPs."</i> In Annual International Conference on the Theory and Applications of Cryptographic Techniques, pp. 626-645. Springer, Berlin, Heidelberg, 2013.</li>
+<li><a id="org8e1b4e4"></a> Kosba, Ahmed, Zhichao Zhao, Andrew Miller, Yi Qian, H. Chan, Charalampos PAPAMAN-THOU, Rafael Pass, SHELAT ABHI, and EC SHI. <i>"C∅ C∅: A framework for building composable zero-knowledge proofs."</i> Cryptology ePrint Archive, Report 2015/1093 (2015).</li>
 </ol>
 </div>
 </div>
@@ -502,7 +502,7 @@ Thus, we arrive at a contradiction, and the whole QAP is aligned LID.
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-16</p>
 <p class="author">Author: Misha Volkhov</p>
-<p class="date">Created: 2022-09-02 Fri 20:23</p>
+<p class="date">Created: 2023-04-15 Sat 13:13</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -1,9 +1,9 @@
 #+TITLE: Linear Relations on QAP Polynomials
 #+DATE: 2021-03-16
 #+AUTHOR: Misha Volkhov
-#+HTML_HEAD: <style> body > div { text-align: justify; max-width: 50em; margin: auto; } </style>
+#+HTML_HEAD: <style> body > div { text-align: justify; max-width: 50em; margin: auto; padding-left: 30px; padding-right: 30px; } </style>
 
-/(this is a copy of the post originally posted [[https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1][here]])/
+/(this is a copy of the note originally posted [[https://priviledge-project.eu/news/linear-relations-on-qap-polynomials-1][here]] as part of PRIViLEDGE project, part of EU 2020 HORIZON; however that website seems to have died)/
 
 To use zk-SNARKs in bigger protocols, we must prove their security in an "extended" environment, that is considering all possible interactions of the zk-SNARK primitive with other protocols. Universal Composability (UC, [[ref1][[1]​]]) is a security framework that allows modelling precisely that, and it is a common target for security proofs of protocols, aimed at privacy and zero-knowledge [[ref2][[2]],[[ref3][3]],[[ref4][4]],[[ref5][5]​]]. However, one cannot use zk-SNARKs in UC proofs directly --- this is a known issue stemming from the fact that (standard model) SNARKs are succinct, and thus inherently /white-box/ [[ref6][[6]​]], which intuitively means that security definitions must assume knowledge of the code of the adversary. Such an assumption is stronger than what UC works with, and therefore one must resort to alternative techniques. One option is to use a non-succinct NIZK (e.g. Gro06 [[ref7][[7]​]]), but this comes at the cost of performance, and may even render the protocol impractical. Another way is to apply certain transformations that make a SNARK black-box secure (e.g. C0C0 framework [[ref16][[16]​]]).
 
@@ -165,19 +165,19 @@ But by the previous argument, as long as $\sum k_i u_i(X)$ includes some indices
 So we are again in the case of linear combination limited to $\mathcal{I}_o$, where we have already proven LID for $\{w_i(X)\}$.
 Thus, we arrive at a contradiction, and the whole QAP is aligned LID.
 * References
-1. <<ref1>> Canetti, Ran. "Universally composable security: A new paradigm for cryptographic protocols." In Proceedings 42nd IEEE Symposium on Foundations of Computer Science, pp. 136-145. IEEE, 2001.
-2. <<ref2>> Kosba, Ahmed, Andrew Miller, Elaine Shi, Zikai Wen, and Charalampos Papamanthou. "Hawk: The blockchain model of cryptography and privacy-preserving smart contracts." In 2016 IEEE symposium on security and privacy (SP), pp. 839-858. IEEE, 2016.
-3. <<ref3>> Kerber, Thomas, Aggelos Kiayias, and Markulf Kohlweiss. "Kachina-Foundations of Private Smart Contracts." IACR Cryptol. ePrint Arch. 2020 (2020): 543.
-4. <<ref4>> Kerber, Thomas, Aggelos Kiayias, and Markulf Kohlweiss. "Mining for Privacy: How to Bootstrap a Snarky Blockchain." IACR Cryptol. ePrint Arch. 2020 (2020): 401.
-5. <<ref5>> Kerber, Thomas, Aggelos Kiayias, Markulf Kohlweiss, and Vassilis Zikas. "Ouroboros crypsinous: Privacy-preserving proof-of-stake." In 2019 IEEE Symposium on Security and Privacy (SP), pp. 157-174. IEEE, 2019.
-6. <<ref6>> Gentry, Craig, and Daniel Wichs. "Separating succinct non-interactive arguments from all falsifiable assumptions." In Proceedings of the forty-third annual ACM symposium on Theory of computing, pp. 99-108. 2011.
-7. <<ref7>> Groth, Jens. "Simulation-sound NIZK proofs for a practical language and constant size group signatures." In International Conference on the Theory and Application of Cryptology and Information Security, pp. 444-459. Springer, Berlin, Heidelberg, 2006.
-8. <<ref8>> Baghery, Karim, Markulf Kohlweiss, Janno Siim, and Mikhail Volkhov. "Another look at extraction and randomization of Groth’s zk-SNARK." FC 2021 (2021).
-9. <<ref9>> Groth, Jens. "On the size of pairing-based non-interactive arguments." In Annual international conference on the theory and applications of cryptographic techniques, pp. 305-326. Springer, Berlin, Heidelberg, 2016.
-10. <<ref10>> Groth, Jens, and Mary Maller. "Snarky signatures: Minimal signatures of knowledge from simulation-extractable SNARKs." In Annual International Cryptology Conference, pp. 581-612. Springer, Cham, 2017.
-11. <<ref11>> Ben-Sasson, Eli, Alessandro Chiesa, Eran Tromer, and Madars Virza. "Succinct non-interactive zero knowledge for a von Neumann architecture." In 23rd {USENIX} Security Symposium ({USENIX} Security 14), pp. 781-796. 2014.
-12. <<ref12>> Parno, Bryan. "A Note on the Unsoundness of vnTinyRAM's SNARK." IACR Cryptol. ePrint Arch. 2015 (2015): 437.
-13. <<ref13>> Gabizon, Ariel. "On the security of the BCTV Pinocchio zk-SNARK variant." IACR Cryptol. ePrint Arch. 2019 (2019): 119.
-14. <<ref14>> Bowe, Sean, Ariel Gabizon, and Matthew D. Green. "A multi-party protocol for constructing the public parameters of the Pinocchio zk-SNARK." In International Conference on Financial Cryptography and Data Security, pp. 64-77. Springer, Berlin, Heidelberg, 2018.
-15. <<ref15>> Gennaro, Rosario, Craig Gentry, Bryan Parno, and Mariana Raykova. "Quadratic span programs and succinct NIZKs without PCPs." In Annual International Conference on the Theory and Applications of Cryptographic Techniques, pp. 626-645. Springer, Berlin, Heidelberg, 2013.
-16. <<ref16>> Kosba, Ahmed, Zhichao Zhao, Andrew Miller, Yi Qian, H. Chan, Charalampos PAPAMAN-THOU, Rafael Pass, SHELAT ABHI, and EC SHI. "C∅ C∅: A framework for building composable zero-knowledge proofs." Cryptology ePrint Archive, Report 2015/1093 (2015).
+1. <<ref1>> Canetti, Ran. /"Universally composable security: A new paradigm for cryptographic protocols."/ In Proceedings 42nd IEEE Symposium on Foundations of Computer Science, pp. 136-145. IEEE, 2001.
+2. <<ref2>> Kosba, Ahmed, Andrew Miller, Elaine Shi, Zikai Wen, and Charalampos Papamanthou. /"Hawk: The blockchain model of cryptography and privacy-preserving smart contracts."/ In 2016 IEEE symposium on security and privacy (SP), pp. 839-858. IEEE, 2016.
+3. <<ref3>> Kerber, Thomas, Aggelos Kiayias, and Markulf Kohlweiss. /"Kachina-Foundations of Private Smart Contracts."/ IACR Cryptol. ePrint Arch. 2020 (2020): 543.
+4. <<ref4>> Kerber, Thomas, Aggelos Kiayias, and Markulf Kohlweiss. /"Mining for Privacy: How to Bootstrap a Snarky Blockchain."/ IACR Cryptol. ePrint Arch. 2020 (2020): 401.
+5. <<ref5>> Kerber, Thomas, Aggelos Kiayias, Markulf Kohlweiss, and Vassilis Zikas. /"Ouroboros crypsinous: Privacy-preserving proof-of-stake."/ In 2019 IEEE Symposium on Security and Privacy (SP), pp. 157-174. IEEE, 2019.
+6. <<ref6>> Gentry, Craig, and Daniel Wichs. /"Separating succinct non-interactive arguments from all falsifiable assumptions."/ In Proceedings of the forty-third annual ACM symposium on Theory of computing, pp. 99-108. 2011.
+7. <<ref7>> Groth, Jens. /"Simulation-sound NIZK proofs for a practical language and constant size group signatures."/ In International Conference on the Theory and Application of Cryptology and Information Security, pp. 444-459. Springer, Berlin, Heidelberg, 2006.
+8. <<ref8>> Baghery, Karim, Markulf Kohlweiss, Janno Siim, and Mikhail Volkhov. /"Another look at extraction and randomization of Groth’s zk-SNARK."/ FC 2021 (2021).
+9. <<ref9>> Groth, Jens. /"On the size of pairing-based non-interactive arguments."/ In Annual international conference on the theory and applications of cryptographic techniques, pp. 305-326. Springer, Berlin, Heidelberg, 2016.
+10. <<ref10>> Groth, Jens, and Mary Maller. /"Snarky Signatures: Minimal Signatures of Knowledge from Simulation-Extractable SNARKs."/ In Annual International Cryptology Conference, pp. 581-612. Springer, Cham, 2017.
+11. <<ref11>> Ben-Sasson, Eli, Alessandro Chiesa, Eran Tromer, and Madars Virza. /"Succinct non-interactive zero knowledge for a von Neumann architecture."/ In 23rd {USENIX} Security Symposium ({USENIX} Security 14), pp. 781-796. 2014.
+12. <<ref12>> Parno, Bryan. /"A Note on the Unsoundness of vnTinyRAM's SNARK."/ IACR Cryptol. ePrint Arch. 2015 (2015): 437.
+13. <<ref13>> Gabizon, Ariel. /"On the security of the BCTV Pinocchio zk-SNARK variant."/ IACR Cryptol. ePrint Arch. 2019 (2019): 119.
+14. <<ref14>> Bowe, Sean, Ariel Gabizon, and Matthew D. Green. /"A multi-party protocol for constructing the public parameters of the Pinocchio zk-SNARK."/ In International Conference on Financial Cryptography and Data Security, pp. 64-77. Springer, Berlin, Heidelberg, 2018.
+15. <<ref15>> Gennaro, Rosario, Craig Gentry, Bryan Parno, and Mariana Raykova. /"Quadratic span programs and succinct NIZKs without PCPs."/ In Annual International Conference on the Theory and Applications of Cryptographic Techniques, pp. 626-645. Springer, Berlin, Heidelberg, 2013.
+16. <<ref16>> Kosba, Ahmed, Zhichao Zhao, Andrew Miller, Yi Qian, H. Chan, Charalampos PAPAMAN-THOU, Rafael Pass, SHELAT ABHI, and EC SHI. /"C∅ C∅: A framework for building composable zero-knowledge proofs."/ Cryptology ePrint Archive, Report 2015/1093 (2015).
