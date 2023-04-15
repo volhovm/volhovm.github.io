@@ -57,7 +57,8 @@ This asks for some explanation:
    - The "estimate" column is not synchronized with org clocking. Almost. It is possible, but I like to keep it simple.
 2. Priorities:
    - The A B C D priorities correspond to the four squares I mentioned earlier.
-   - A and C are the most common ones. B and D are more rare, since if it's not important, why is it even in my calendar?
+     - (A and C are important, A and B are urgent, everything else is the opposite.)
+   - C is the most common one. A appears when I have some deadlines. B and D are more rare, since if it's not important, why is it even in my calendar?
      - D is there to handle FOMO, because I don't want to forget about this cool thing I wanted to check out.
      - B is there to remind me I can let go of certain things without any (external) penalty.
    - ~S-up/S-down~ make it easy to change the priority of a task.
