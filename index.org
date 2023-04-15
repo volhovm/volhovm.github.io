@@ -26,16 +26,19 @@ Recent projects[fn:1]:
 7. [[https://priviledge-project.eu/news/reasoning-about-privacy-in-smart-contracts][Reasoning about Privacy in Smart Contracts]], blog post 02/2020.
 8. /Techniques, Software, and Applications for Packed Partially Homomorphic Encryption/. [[./pahedgk.pdf][Preprint]]. Master's thesis at INRIA Paris/MPRI.
 
-My contacts:
+
+Non-professional writing:
+- [[./blog/N2023-04-13.html][N2023-04-13]] Visualizing Estimates in org-mode's Agenda
+- [[./blog/N2022-10-04.html][N2022-10-04]] Про втому
+- [[./blog/N2022-05-14.html][N2022-05-14]] Зарисовка первого дня
+
+
+Contacts:
 + Email: ~mikhail.volkhov~ АТ ~ed.ac.uk~
 + Github: https://github.com/volhovm
 + GPG key at [[https://keys.openpgp.org/search?q=3B88C4272A0B49C8F0B0A78CF962509771F9CD1A][keys.openpgp.org]]. FP ~3B88 C427 2A0B 49C8 F0B0 A78C F962 5097 71F9 CD1A~
 + Social media: [[https://www.youtube.com/channel/UCT470I2k3ipNnq6jY3HvsQQ][[youtube]​]], [[https://www.instagram.com/volhovm/][[instagram]​]], [[https://soundcloud.com/volhovm/likes][[soundcloud]​]], [[https://infosec.exchange/@volhovm][[mastodon]​]] (my nickname is ~volhovm~ almost everywhere).
 
-My informal writing:
-- [[./blog/N2023-04-13.html][N2023-04-13]] Visualizing Estimates in org-mode's Agenda
-- [[./blog/N2022-10-04.html][N2022-10-04]] Про втому
-- [[./blog/N2022-05-14.html][N2022-05-14]] Зарисовка первого дня
 
 
 # #+ATTR_HTML: :style max-width:10%;
