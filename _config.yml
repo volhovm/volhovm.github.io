@@ -45,7 +45,7 @@ repo_trophies:
 # will use title and url fields
 # Take a look to https://github.com/jekyll/jekyll-feed for more customization
 
-rss_icon: true
+rss_icon: false # true
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -102,7 +102,7 @@ pinterest_id: # your pinterest id
 unsplash_id: # your unsplash id
 instagram_id: volhovm # your instagram id
 facebook_id: # your facebook id
-youtube_id: youtube.com/channel/UCT470I2k3ipNnq6jY3HvsQQ # your youtube channel id (youtube.com/@<youtube_id>)
+youtube_id: volhovm # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
