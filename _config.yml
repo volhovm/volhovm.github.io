@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Misha
 middle_name:
 last_name: Volkhov
-email: mv <ПЕСИК> volhovm <ДОТ> com
+email: mikhail <DОТ> volkhov <ПЕСИК> ed.ac.uk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -71,10 +71,10 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: # your GitHub user name
+github_username: volhovm # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
-mastodon_username: # your mastodon instance+username in the format instance.tld/@username
+mastodon_username: @volhovm@infosec.exchange  # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
@@ -100,13 +100,13 @@ lastfm_id: # your lastfm id
 spotify_id: # your spotify id
 pinterest_id: # your pinterest id
 unsplash_id: # your unsplash id
-instagram_id: # your instagram id
+instagram_id: volhovm # your instagram id
 facebook_id: # your facebook id
-youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
+youtube_id: youtube.com/channel/UCT470I2k3ipNnq6jY3HvsQQ # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  My nickname is `volhovm` pretty much everywhere.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
