@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://volhovm.github.io/blog//sitemap.xml
+Sitemap: https://volhovm.github.io/sitemap.xml
