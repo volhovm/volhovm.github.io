@@ -1,3 +1,13 @@
+---
+layout: post
+title: Visualising Estimates in org-mode's Agenda
+date: 2023-04-13
+description:
+categories:
+giscus_comments: true
+related_posts: false
+---
+
 > **TLDR**: *things many, computer complex & scary, visual agenda good,
 > brain control no panic*.
 

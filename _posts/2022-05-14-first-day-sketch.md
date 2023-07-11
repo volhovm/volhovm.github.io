@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Зарисовка первого дня
-date: 2022-05-14 08:57:00-0400
+date: 2022-05-14
 description:
 categories:
 giscus_comments: false
