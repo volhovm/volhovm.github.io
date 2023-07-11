@@ -12,6 +12,11 @@ related_posts: false
   p {
     text-align: justify;
   }
+
+  figure {
+    text-align: center;
+    width: 85%;
+  }
 </style>
 
 
