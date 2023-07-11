@@ -123,7 +123,7 @@ pagination:
           <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
         {% endif %}
       </h3>
-      <p>{{ post.description }}</p>
+      {% if post.description != "" %} <p>{{ post.description }}</p> {% endif %}
       <p class="post-meta">
         {{ read_time }} min read &nbsp; &middot; &nbsp;
         {{ post.date | date: '%B %-d, %Y' }}
@@ -133,7 +133,7 @@ pagination:
       </p>
       <p class="post-tags">
         <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
-          <i class="fas fa-calendar fa-sm"></i> {{ year }} </a>
+          <!-- <i class="fas fa-calendar fa-sm"></i> {{ year }} </a> -->
 
           {% if tags != "" %}
           &nbsp; &middot; &nbsp;
