@@ -8,6 +8,13 @@ giscus_comments: true
 related_posts: false
 ---
 
+<style type="text/css">
+  p {
+    text-align: justify;
+  }
+</style>
+
+
 > **TLDR**: *things many, computer complex & scary, visual agenda good,
 > brain control no panic*.
 
@@ -18,7 +25,9 @@ the following situation. You spend a weekend somewhere, maybe even not
 opening your computer for a few days, only to return back on Monday and
 see this:
 
-![](./N2023-04-13-res/agenda-bad.png){width="600px"}
+
+{% include figure.html path="assets/img/agenda-bad.png" class="img-fluid rounded z-depth-1" %}
+
 
 *(Some of the tasks are fictional.)*
 
@@ -40,8 +49,8 @@ ritalin won\'t help. However not using the agenda is not an option...
 take it as an assumption.
 
 Instead I wrote some elisp, that roughly follows some GTD-like approach
-(maybe), that makes my agenda ****less cluttered**** and implicitly
-****pushes me towards certain organisational strategies**** that seem
+(maybe), that makes my agenda **less cluttered** and implicitly
+**pushes me towards certain organisational strategies** that seem
 nice.
 
 The strategies are:
@@ -72,7 +81,7 @@ otherwise.
 
 Now, that\'s what my new agenda looks like after sorting:
 
-![](./N2023-04-13-res/agenda-good.png){width="600px"}
+{% include figure.html path="assets/img/agenda-good.png" class="img-fluid rounded z-depth-1" %}
 
 This asks for some explanation:
 
@@ -170,6 +179,7 @@ effort estimates:
 The symbols are font-dependent, and so I keep this comment around in my
 `.emacs` in case I need to adjust something after a system update:
 
+``` elisp
     ; https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block)
     ; https://en.wikipedia.org/wiki/Braille_Patterns
     ; https://en.wikipedia.org/wiki/Box-drawing_character
@@ -179,12 +189,13 @@ The symbols are font-dependent, and so I keep this comment around in my
     ; ▪■◼◼︎◼■▤▦◧▣◼□▢◻▯◺◣
     ; ⣿⣧⡇⡄ ⣷ ⣦ ⣇ ⣄ ⠶
     ; ◭▲
+```
 
 Everything else, except for these visual estimates, is a default feature
 of emacs. Although not novel, here is how the separation between
 categories in agenda is achieved:
 
-``` {.elisp width="300px"}
+``` elisp
 (setq org-agenda-custom-commands
       '(("w" "Week agenda"
          (
