@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <code>mikhail <ДОТ> volkhov <ПЕСИК> ed.ac.uk</code>
+subtitle: <small><code>mikhail <ДОТ> volkhov <ПЕСИК> ed.ac.uk</code></small>
 
 profile:
   align: right
