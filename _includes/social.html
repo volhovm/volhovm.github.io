@@ -40,9 +40,6 @@
             {%- if site.twitter_username -%}
             <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter"><i class="fab fa-twitter"></i></a>
             {% endif %}
-            {%- if site.mastodon_username -%}
-            <a rel="me" href="https://{{ site.mastodon_username  }}" title="Mastodon"><i class="fab fa-mastodon"></i></a>
-            {% endif %}
             {%- if site.medium_username -%}
             <a href="https://medium.com/@{{ site.medium_username }}" title="Medium"><i class="fab fa-medium"></i></a>
             {% endif %}
@@ -94,6 +91,9 @@
             {%- if site.instagram_id -%}
             <a href="https://instagram.com/{{ site.instagram_id }}" title="Instagram"><i class="fab fa-instagram"></i></a>
             {% endif %}
+            {%- if site.soundcloud_id -%}
+            <a href="{{ site.soundcloud_id }}" title="Soundcloud"><i class="fab fa-soundcloud"></i></a>
+            {% endif %}
             {%- if site.facebook_id -%}
             <a href="https://facebook.com/{{ site.facebook_id }}" title="Facebook"><i class="fab fa-facebook"></i></a>
             {% endif %}
@@ -105,4 +105,7 @@
             {% endif %}
             {%- if site.rss_icon -%}
             <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed"><i class="fas fa-rss-square"></i></a>
+            {% endif %}
+            {%- if site.mastodon_username -%}
+            <a rel="me" href="https://{{ site.mastodon_username  }}" title="Mastodon"><i class="fab fa-mastodon"></i></a>
             {% endif %}
