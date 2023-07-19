@@ -15,9 +15,12 @@ related_posts: false
 
   figure {
     text-align: center;
-    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85%;
   }
 </style>
+
 
 
 > **TLDR**: *things many, computer complex & scary, visual agenda good,
@@ -31,7 +34,8 @@ opening your computer for a few days, only to return back on Monday and
 see this:
 
 
-{% include figure.html path="assets/img/2023-04-13-org-estimates/agenda-bad.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/2023-04-13-org-estimates/agenda-bad.png"  class="img-fluid rounded" %}
+
 
 
 *(Some of the tasks are fictional.)*
@@ -86,7 +90,7 @@ otherwise.
 
 Now, that\'s what my new agenda looks like after sorting:
 
-{% include figure.html path="assets/img/2023-04-13-org-estimates/agenda-good.png" class="img-fluid rounded z-depth-1" %}
+{% include figure.html path="assets/img/2023-04-13-org-estimates/agenda-good.png" class="img-fluid rounded" %}
 
 This asks for some explanation:
 
