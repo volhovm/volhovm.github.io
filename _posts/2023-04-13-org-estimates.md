@@ -23,8 +23,8 @@ related_posts: false
 
 
 
-> **TLDR**: *things many, computer complex & scary, visual agenda good,
-> brain control no panic*.
+> <small>**TLDR**: *things many, computer complex & scary, visual agenda good,
+> brain control no panic*.</small>
 
 If you\'re using org-mode and tend to over-organise things hoping that
 that will improve your productivity or mood (which it might, or might
