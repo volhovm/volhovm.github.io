@@ -34,7 +34,7 @@ opening your computer for a few days, only to return back on Monday and
 see this:
 
 
-{% include figure.html path="assets/img/2023-04-13-org-estimates/agenda-bad.png"  class="img-fluid rounded" %}
+{% include figure.html path="assets/img/2023-04-13-org-estimates/agenda-bad.png"  class="img-fluid rounded" zoomable=true %}
 
 
 
@@ -90,7 +90,7 @@ otherwise.
 
 Now, that\'s what my new agenda looks like after sorting:
 
-{% include figure.html path="assets/img/2023-04-13-org-estimates/agenda-good.png" class="img-fluid rounded" %}
+{% include figure.html path="assets/img/2023-04-13-org-estimates/agenda-good.png" class="img-fluid rounded" zoomable=true %}
 
 This asks for some explanation:
 
