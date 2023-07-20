@@ -574,7 +574,7 @@ footer.sticky-bottom {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
-    margin-top: 2rem;
+    margin-top: -1rem;
     margin-bottom: -2rem;
     text-align: right;
   }
@@ -585,7 +585,6 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
 
       .preview {
         width: 100%;
