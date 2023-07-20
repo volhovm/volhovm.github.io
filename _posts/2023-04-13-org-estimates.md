@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Visualising Estimates in org-mode's Agenda
+title: Visualising Estimates in org-mode Agenda
 date: 2023-04-13
-description:
+description: Decluttering busy agendas in ~100 sloc!
 categories:
 giscus_comments: true
 related_posts: false
