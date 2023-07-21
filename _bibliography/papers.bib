@@ -1,30 +1,17 @@
 ---
 ---
 
-@online{pahedgk,
-    author = "Mikhail Volkhov",
-    title = "Techniques, Software, and Applications for Packed Partially Homomorphic Encryption",
-    howpublished  = "\url{https://volhovm.com/pahedgk.pdf}",
-    year={2019},
-}
 
-@inproceedings{baghery2021another,
+@inproceedings{kolonelos2023zero,
   selected={true},
-  title={Another Look at Extraction and Randomization of Groth’s zk-SNARK},
-  author={Baghery, Karim and Kohlweiss, Markulf and Siim, Janno and Volkhov, Mikhail},
-  booktitle={Financial Cryptography and Data Security},
-  pages={457--475},
-  year={2021},
-  organization={Springer}
-}
-
-@inproceedings{kohlweiss2021snarky,
-  title={Snarky Ceremonies},
-  author={Kohlweiss, Markulf and Maller, Mary and Siim, Janno and Volkhov, Mikhail},
-  booktitle={Advances in Cryptology -- ASIACRYPT},
-  pages={98--127},
-  year={2021},
-  organization={Springer}
+  title={Zero-Knowledge Arguments for Subverted RSA Groups},
+  author={Kolonelos, Dimitris and Maller, Mary and Volkhov, Mikhail},
+  booktitle={IACR International Conference on Public-Key Cryptography},
+  pages={512--541},
+  year={2023},
+  organization={Springer},
+  eprint={2023/364},
+  abstract={This work investigates zero-knowledge protocols in subverted RSA groups where the prover can choose the modulus and where the verifier does not know the group order. We introduce a novel technique for extracting the witness from a general homomorphism over a group of unknown order that does not require parallel repetitions. We present a NIZK range proof for general homomorphisms such as Paillier encryptions in the designated verifier model that works under a subverted setup. The key ingredient of our proof is a constant sized NIZK proof of knowledge for a plaintext. Security is proven in the ROM assuming an IND-CPA additively homomorphic encryption scheme. The verifier's public key is reusable, can be maliciously generated  and is linear in the number of proofs to be verified.},
 }
 
 
@@ -34,16 +21,68 @@
   booktitle={Proceedings on Privacy Enhancing Technologies},
   volume={4},
   pages={507--527},
-  year={2022}
+  year={2022},
+  eprint={2022/1002},
+  talk={https://www.youtube.com/watch?v=sUh_8sqKtzc},
+  abstract={Privacy-oriented cryptocurrencies, like Zcash or Monero, provide fair transaction anonymity and confidentiality but lack important features compared to fully public systems, like Ethereum. Specifically, supporting assets of multiple types and providing a mechanism to atomically exchange them, which is critical for e.g. decentralized finance (DeFi), is challenging in the private setting. By combining insights and security properties from Zcash and SwapCT (PETS 21, an atomic swap system for Monero), we present a simple zk-SNARKs-based transaction scheme, called Zswap, which is carefully malleable to allow the merging of transactions, while preserving anonymity. Our protocol enables multiple assets and atomic exchanges by making use of sparse homomorphic commitments with aggregated open randomness, together with Zcash-friendly simulation-extractable non-interactive zero-knowledge (NIZK) proofs. This results in a provably secure privacy-preserving transaction protocol, with efficient swaps, and overall performance close to that of existing deployed private cryptocurrencies. It is similar to Zcash Sapling and benefits from existing code bases and implementation expertise.},
+}
+
+@inproceedings{baghery2021another,
+  selected={true},
+  title={Another Look at Extraction and Randomization of Groth’s zk-SNARK},
+  author={Baghery, Karim and Kohlweiss, Markulf and Siim, Janno and Volkhov, Mikhail},
+  booktitle={Financial Cryptography and Data Security},
+  abstract={Some comments},
+  pages={457--475},
+  year={2020},
+  organization={Springer},
+  eprint={2020/811},
+  talk={https://www.youtube.com/watch?v=Ub7wdyWQb1w},
+  abstract={Due to the simplicity and performance of zk-SNARKs they are widely used in real-world cryptographic protocols, including blockchain and smart contract systems. Simulation Extractability (SE) is a necessary security property for a NIZK argument to achieve Universal Composability (UC), a common requirement for such protocols. Most of the works that investigated SE focus on its strong variant which implies proof non-malleability. In this work we investigate a relaxed weaker notion, that allows proof randomization, while guaranteeing statement non-malleability, which we argue to be a more natural security property. First, we show that it is already achievable by Groth16, arguably the most efficient and widely deployed SNARK nowadays. Second, we show that because of this, Groth16 can be efficiently transformed into a black-box weakly SE NIZK, which is sufficient for UC protocols.<br>
+
+To support the second claim, we present and compare two practical constructions, both of which strike different performance trade-offs:<br>
+
+* Int-Groth16 makes use of a known transformation that encrypts the witness inside the SNARK circuit. We instantiate this transformation with an efficient SNARK-friendly encryption scheme.<br>
+
+* Ext-Groth16 is based on the SAVER encryption scheme (Lee et al.) that plugs the encrypted witness directly into the verification equation, externally to the circuit. We prove that Ext-Groth16 is black-box weakly SE and, contrary to Int-Groth16, that its proofs are fully randomizable.}
+}
+
+@inproceedings{kohlweiss2021snarky,
+  title={Snarky Ceremonies},
+  author={Kohlweiss, Markulf and Maller, Mary and Siim, Janno and Volkhov, Mikhail},
+  booktitle={Advances in Cryptology -- ASIACRYPT},
+  pages={98--127},
+  year={2021},
+  organization={Springer},
+  eprint={2021/219},
+  talk={https://www.youtube.com/watch?v=fo0BmpyBhS87},
+  abstract={Succinct non-interactive arguments of knowledge (SNARKs) have found numerous applications in the blockchain setting and elsewhere. The most efficient SNARKs require a distributed ceremony protocol to generate public parameters, also known as a structured reference string (SRS). Our contributions are two-fold:<br>
+
+1. We give a security framework for non-interactive zero-knowledge arguments with a ceremony protocol.<br>
+
+2. We revisit the ceremony protocol of Groth's SNARK [Bowe et al., 2017]. We show that the original construction can be simplified and optimized, and then prove its security in our new framework. Importantly, our construction avoids the random beacon model used in the original work.}
 }
 
 
-@inproceedings{kolonelos2023zero,
-  selected={true},
-  title={Zero-Knowledge Arguments for Subverted RSA Groups},
-  author={Kolonelos, Dimitris and Maller, Mary and Volkhov, Mikhail},
-  booktitle={IACR International Conference on Public-Key Cryptography},
-  pages={512--541},
-  year={2023},
-  organization={Springer}
+@thesis{pahedgk,
+  author = "Mikhail Volkhov",
+  title = "Techniques, Software, and Applications for Packed Partially Homomorphic Encryption",
+  school = {Master's thesis at INRIA Paris/MPRI},
+  howpublished  = "\url{https://volhovm.com/pahedgk.pdf}",
+  abstract  = "Secure Machine Learning analyses different ML solutions trying to answer the question of how
+to make these algorithms conform nowadays security and privacy requirements. Most of the
+solutions fall into the category of either secure training, or secure inference (classification or
+regression). The active research on fully homomorphic encryption (FHE) that started right after
+Gentry’s [Gen09] proposal together with the latest improvements in protocol design produced
+a lot of different secure computation models that allow to easily adapt existing ML methods,
+like classifiers, to meet the common security goals. One of the popular targets to apply these
+techniques to are Convolutional Neural Network classifiers, and recently it was shown that it is
+possible and practical to execute CNN linear layers using modern FHEs [JVC18]. On the other
+hand, a number of different techniques that make use of simpler classifiers, like SVM, can achieve
+comparable classification accuracy, using much simpler cryptographic primitives [MRSV19]. Different combinations of multiparty protocols, homomorphic encryption, and classifiers present
+many open problems related to the performance, accuracy, and security. Verification is another
+concern — many solutions are implemented only as prototypes and do not take the systematic
+verified approach that is possible to introduce with software verification techniques.",
+  pdf  = "https://volhovm.com/pahedgk.pdf",
+  year={2019},
 }

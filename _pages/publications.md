@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: publications in reversed chronological order. 
+description: Paper authors are sorted alphabetically in cryptography (usually), so yes, I'm always in the end of the list 🤷
 nav: true
 nav_order: 1
 ---
