@@ -105,7 +105,8 @@ youtube_id: volhovm # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  My nickname is <code>volhovm</code> pretty much everywhere.
+  My nickname is <code>volhovm</code> pretty much everywhere.<br>My <a href="https://keys.openpgp.org/search?q=3B88C4272A0B49C8F0B0A78CF962509771F9CD1A">GPG key</a> FP is <code>3B88 C427 2A0B 49C8 F0B0 A78C F962 5097 71F9 CD1A</code>.
+
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
