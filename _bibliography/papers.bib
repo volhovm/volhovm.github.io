@@ -1,6 +1,24 @@
 ---
 ---
 
+@misc{cryptoeprint:2023/1787,
+  selected = {true}
+  author = {Bernardo David and Felix Engelmann and Tore Frederiksen and Markulf Kohlweiss and Elena Pagnin and Mikhail Volkhov},
+  title = {Updatable Privacy-Preserving Blueprints},
+  howpublished = {Cryptology ePrint Archive, Paper 2023/1787},
+  year = {2023},
+  eprint={2023/1787}
+  url = {https://eprint.iacr.org/2023/1787},
+  abstract = {Privacy-preserving blueprints enable users to create escrows using the auditor's public key. An escrow encrypts the evaluation of a function $P(t,x)$, where $t$ is a secret input used to generate the auditor's key and $x$ is the user's private input to escrow generation. Nothing but $P(t,x)$ is revealed even to a fully corrupted auditor. The original definition and construction (Kohlweiss et al., EUROCRYPT'23) only support the evaluation of functions on an input $x$ provided by a single user.<br>
+
+We address this limitation by introducing updatable privacy-preserving blueprint schemes (UPPB), which enhance the original notion with the ability for multiple parties to non-interactively update the private value $x$ in a blueprint. Moreover, a UPPB scheme allows for verifying that a blueprint is the result of a sequence of valid updates while revealing nothing else.<br>
+
+We present uBlu, an efficient instantiation of UPPB for computing a comparison between private user values and a private threshold $t$ set by the auditor, where the current value $x$ is the cumulative sum of private inputs, which enables applications such as privacy-preserving anti-money laundering and location tracking. Additionally, we show the feasibility of the notion generically for all value update functions and (binary) predicates from FHE and NIZKs.<br>
+
+Our main technical contribution is a technique to keep the size of primary blueprint components independent of the number of updates and reasonable for practical applications. This is achieved by elegantly extending an algebraic NIZK by Couteau and Hartmann (CRYPTO'20) with an update function and making it compatible with our additive updates. This result is of independent interest and may find additional applications thanks to the concise size of our proofs.},
+}
+
+
 
 @inproceedings{kolonelos2023zero,
   selected={true},
