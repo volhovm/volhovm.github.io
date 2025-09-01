@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Paper authors are sorted alphabetically in cryptography (usually), so yes, I'm always in the end of the list 🤷
+description: Paper authors are sorted alphabetically in cryptography (usually), so a V surname puts me in the end of most author lists.
 nav: true
 nav_order: 1
 ---
