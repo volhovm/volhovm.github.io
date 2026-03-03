@@ -85,9 +85,6 @@
             {%- if site.unsplash_id -%}
             <a href="https://unsplash.com/@{{ site.unsplash_id }}" title="Unsplash"><i class="fab fa-unsplash"></i></a>
             {% endif %}
-            {%- if site.instagram_id -%}
-            <a href="https://instagram.com/{{ site.instagram_id }}" title="Instagram"><i class="fab fa-instagram"></i></a>
-            {% endif %}
             {%- if site.soundcloud_id -%}
             <a href="{{ site.soundcloud_id }}" title="Soundcloud"><i class="fab fa-soundcloud"></i></a>
             {% endif %}
@@ -96,6 +93,9 @@
             {% endif %}
             {%- if site.youtube_id -%}
             <a href="https://youtube.com/@{{ site.youtube_id }}" title="YouTube"><i class="fab fa-youtube"></i></a>
+            {% endif %}
+            {%- if site.instagram_id -%}
+            <a href="https://instagram.com/{{ site.instagram_id }}" title="Instagram"><i class="fab fa-instagram"></i></a>
             {% endif %}
             {%- if site.discord_id -%}
             <a href="https://discord.com/users/{{ site.discord_id }}" title="Discord"><i class="fab fa-discord"></i></a>
