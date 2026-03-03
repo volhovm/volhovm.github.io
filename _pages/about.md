@@ -6,13 +6,10 @@ subtitle: <small><code>mv <ЕТ> volhovm <ДОТ> com</code></small>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_2.jpg
   image_circular: false # crops the image to make it circular
-#  address: >
-#  address: >
-#    <p>555 your office number</p>
-#    <p>123 your address street</p>
-#    <p>Your City, State 12345</p>
+  address: >
+    <p style="font-size: 0.7em; text-align: center; color: gray;">I'm not nearly as grumpy most of the time actually</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
