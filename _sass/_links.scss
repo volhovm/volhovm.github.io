@@ -2,6 +2,11 @@
  * Links page (_pages/links.html)
  ******************************************************************************/
 
+// This page is 10% wider than the rest of the site.
+body:has(.links-grid) .container {
+  max-width: calc(#{$max-content-width} * 1.1);
+}
+
 .links-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
@@ -53,11 +58,5 @@
   margin-left: auto;
   font-family: monospace;
   font-size: 0.75rem;
-  color: var(--global-text-color-light);
-}
-
-.links-note {
-  flex-basis: 100%;
-  font-size: 0.8rem;
   color: var(--global-text-color-light);
 }

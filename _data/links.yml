@@ -1,5 +1,5 @@
 # Sections and entries of the /links/ page (_pages/links.html).
-# Entry fields: title, url; optional site (replaces the domain shown) and note.
+# Entry fields: title, url; optional site (replaces the domain shown).
 
 - section: Blogs and subscriptions
   links:
@@ -26,7 +26,6 @@
       url: https://www.hedweb.com/welcome.htm
     - title: smoothbrains.net
       url: https://smoothbrains.net/
-      note: QRI and phenomenology
     - title: Qualia Research Institute
       url: https://qri.org/
 
@@ -38,8 +37,7 @@
       url: https://alinush.github.io/
     - title: The Deviancy Signal
       url: https://web.archive.org/web/20260602232138/https://thompson2026.com/blog/deviancy-signal/
-      site: thompson2026.com, archived
-      note: On "nothing to hide"
+      site: thompson2026.com
     - title: Schneier on Security
       url: https://www.schneier.com/
     - title: "Phrack: Calling All Hackers"
