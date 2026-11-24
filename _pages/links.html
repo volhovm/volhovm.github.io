@@ -1,0 +1,32 @@
+---
+layout: page
+permalink: /links/
+title: links
+description: Here's a quick selection of links and ideas that I'm happy to share and discuss. (This section is heavily WIP.)
+nav: true
+nav_order: 2
+---
+<div class="links-grid">
+  {%- for group in site.data.links %}
+  <section class="links-section">
+    <h2 class="links-heading"><span class="links-index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>{{ group.section }}</h2>
+    <ul class="links-list">
+      {%- for link in group.links %}
+      {%- if link.site %}
+        {%- assign site_label = link.site %}
+      {%- else %}
+        {%- assign site_label = link.url | split: '//' | last | split: '/' | first | remove_first: 'www.' %}
+      {%- endif %}
+      <li>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+        <span class="links-leader"></span>
+        <span class="links-site">{{ site_label }}</span>
+        {%- if link.note %}
+        <span class="links-note">{{ link.note }}</span>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </section>
+  {%- endfor %}
+</div>
