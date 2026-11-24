@@ -35,6 +35,40 @@ body.sticky-bottom-footer {
   }
 }
 
+// Profile photo zooms into profile.zoom_origin on hover (_layouts/about.html).
+// The picture clips the zoomed image, so it carries the shadow instead of the image.
+.profile-zoom {
+  picture {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  picture:has(.rounded-circle) {
+    border-radius: 50%;
+  }
+
+  img {
+    display: block;
+    box-shadow: none;
+    transform-origin: var(--profile-zoom-origin);
+    transition: transform 0.5s ease;
+  }
+
+  @media (hover: hover) {
+    picture:hover img {
+      transform: scale(2.2);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    img {
+      transition: none;
+    }
+  }
+}
+
 // TODO: redefine content layout.
 
 

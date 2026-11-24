@@ -8,6 +8,7 @@ profile:
   align: right
   image: prof_pic_2.jpg
   image_circular: false # crops the image to make it circular
+  zoom_origin: 47% 51% # point (x y) of the photo that hover zooms into: the face
   address: >
     <p style="font-size: 0.7em; text-align: center; color: gray;">I'm not nearly as grumpy most of the time actually</p>
 
