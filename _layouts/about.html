@@ -34,6 +34,18 @@ layout: default
             </div>
             {%- endif %}
           </div>
+          {%- if page.profile.zoom_origin %}
+          <script>
+            /* Every third hover over the photo also spins it during the zoom. */
+            Array.prototype.forEach.call(document.querySelectorAll(".profile-zoom picture"), function (picture) {
+              var hovers = 0;
+              picture.addEventListener("mouseenter", function () {
+                hovers += 1;
+                picture.classList.toggle("profile-zoom-spin", hovers % 3 === 0);
+              });
+            });
+          </script>
+          {%- endif %}
           {%- endif %}
 
           <div class="clearfix" style="text-align: justify;">

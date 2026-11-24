@@ -36,6 +36,9 @@ body.sticky-bottom-footer {
 }
 
 // Profile photo zooms into profile.zoom_origin on hover (_layouts/about.html).
+// On every third hover, the script in the layout adds .profile-zoom-spin, and the
+// photo also spins once, overlapped with the zoom. The spin uses the `rotate` property, not
+// `transform`, so the zoom-out transition does not spin the photo back.
 // The picture clips the zoomed image, so it carries the shadow instead of the image.
 .profile-zoom {
   picture {
@@ -60,12 +63,29 @@ body.sticky-bottom-footer {
     picture:hover img {
       transform: scale(2.2);
     }
+
+    // Spin hovers: the 0.5s spin starts halfway through the 0.5s zoom, so the
+    // last half of the zoom and the first half of the spin happen together.
+    picture.profile-zoom-spin:hover img {
+      animation: profile-zoom-spin 0.5s ease-in-out 0.25s;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
     img {
       transition: none;
+      animation: none !important;
     }
+  }
+}
+
+@keyframes profile-zoom-spin {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
   }
 }
 
