@@ -11,6 +11,8 @@
       url: https://aeon.co/
     - title: Works in Progress
       url: https://www.worksinprogress.news/
+    - title: Stanford Encyclopedia
+      url: https://plato.stanford.edu/
 
 - section: Ethics and spirituality
   links:
@@ -42,12 +44,44 @@
       url: https://www.schneier.com/
     - title: "Phrack: Calling All Hackers"
       url: https://phrack.org/issues/71/calling-all-hackers
+    - title: Paged Out!
+      url: https://pagedout.institute/
 
-- section: Finance and web3
+- section: Web3, finance and decentralized web
   links:
     - title: Pluranimity
       url: https://pluranimity.org/
+    - title: Polis
+      url: https://pol.is/
     - title: Exploring MycoFi
       url: https://book.mycofi.earth/mycofi-book
     - title: Bits about Money
       url: https://www.bitsaboutmoney.com/
+
+- section: Cryptography papers and resources
+  links:
+    - title: Gödel in Cryptography
+      url: https://eprint.iacr.org/2025/1296.pdf
+    - title: Impagliazzo's Five Worlds
+      url: https://gwern.net/doc/cs/cryptography/1995-impagliazzo.pdf
+    - title: Experimental relativistic ZK proofs
+      url: https://arxiv.org/pdf/2012.10452
+    - title: How to Prove False Statements
+      url: https://eprint.iacr.org/2025/118.pdf
+    - title: TEE.fail
+      url: https://tee.fail/
+    - title: It's time to talk about TEEs
+      url: https://alinush.github.io/tee
+
+- section: Other and fun
+  links:
+    - title: ribo.zone
+      url: https://ribo.zone/
+    - title: MELONS4EVER
+      url: https://melonking.net/melon
+    - title: Holotypic Occlupanid Research Group
+      url: https://www.horg.com/horg/
+    - title: Foldable Flight
+      url: https://www.foldableflight.com/planes
+    - title: Nathan Harms
+      url: https://harmless.ink/arts/arts.html
